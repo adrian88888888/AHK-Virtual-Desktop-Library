@@ -4,7 +4,7 @@
 In windows 10 you can use virtual desktops, this library gives you functions to manipulate them, for example: `GoToDesktopNumber(desktop_number)`, `GetCurrentDesktopNumber()`,`GetNumberOfDesktops()`, `MoveCurrentWindowToDesktop(desktop_number)`
 
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
-- [Working AHK Example](https://github.com/soundblast-official/VirtualDesktopAccessor-AHK-library/blob/main/README.md#working-ahk-example "Working ahk example")
+- [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
 
 ------------------
 
