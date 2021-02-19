@@ -40,6 +40,17 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 |`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|Every time you open the a specified program(does not matter how) it will open in the desired desktop<br/>You can use this to have your favourite programs in the desktops you want<br/>Only recives 2 parameters: the desktop_number and winClass OR the winTitle OR the winExe, is recomended to use the winClass like the code example|
 |`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
 
+## Pin/UnPin:
+When you pin a Window or an App, it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
+| Functions  |  Description |
+| :------------ | :------------ |
+|`PinWindow(hwnd)`||
+|`UnPinWindow(hwnd)`||
+|`IsPinnedWindow(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
+|`PinApp(hwnd)`||
+|`UnPinApp(hwnd)`||
+|`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
+
 ## Misc:
 | Functions  |  Description |
 | :------------ | :------------ |
