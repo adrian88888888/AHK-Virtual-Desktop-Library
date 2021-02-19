@@ -58,7 +58,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
 
 ## Usefull Built in Functions:
-They will make your life easier<br/>
+They will make your life easier(maybe)<br/>
 Remember that when Ctrl+C on an MsgBox you copy his content!
 | Functions  |  Description |
 | :------------ | :------------ |
