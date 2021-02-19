@@ -48,7 +48,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`PinWindow(hwnd)`|Pins the specified window(making it stay in all desktops)|
 |`UnPinWindow(hwnd)`|UnPins the specified window|
 |`IsPinnedWindow(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
-|`PinApp(hwnd)`|Pins the specified app|
+|`PinApp(hwnd)`|Pins the specified app(making it stay in all desktops)|
 |`UnPinApp(hwnd)`|UnPins the specified app|
 |`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 
@@ -58,7 +58,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
 
 ## Usefull Built in Functions:
-They will make your life easier
+They will make your life easier<br/>
 Remember that when Ctrl+C on an MsgBox you copy his content!
 | Functions  |  Description |
 | :------------ | :------------ |
@@ -101,7 +101,7 @@ AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
 ; to get the class easier:
 r::
 activeClass := GetActiveClass()
-MsgBox, The active Class is %activeClass% ; Remember that when Ctrl+C on an MsgBox you copy his content!
+MsgBox, The active Class is "%activeClass%" remember that when Ctrl+C on an MsgBox you copy his content!
 return
 
 ;Pin current window(remember to unpin)
