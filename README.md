@@ -10,7 +10,7 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 
 # Documentation:
 
-Note: a lot of functions takes the parameter hwnd, you can use the built in `GetActiveHwnd()` to get the active hwnd
+Note: a lot of functions takes the parameter hwnd, you can use the built in function `GetActiveHwnd()` to get the active hwnd
 
 ## Do basic stuff:
 | Functions  |  Description |
@@ -89,13 +89,13 @@ AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
 
 ;Pin current window(remember to unpin)
 f::
-activeHwnd := GetActiveHwnd()
+activeHwnd := GetActiveHwnd() ; you can use the built in function GetActiveHwnd() to get the active hwnd
 PinWindow(activeHwnd)
 return
 
 ;UpPin current window
 g::
-activeHwnd := GetActiveHwnd()
+activeHwnd := GetActiveHwnd() ; you can use the built in function GetActiveHwnd() to get the active hwnd
 UnPinWindow(activeHwnd)
 return
 
