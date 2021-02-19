@@ -42,14 +42,14 @@ Note: a lot of functions takes the parameter hwnd, you can use the built in `Get
 |`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
 
 ## Pin/UnPin:
-Note: When you pin a Window or an App, it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
+When you pin a Window or an App, it means that it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
 | Functions  |  Description |
 | :------------ | :------------ |
-|`PinWindow(hwnd)`|Pins the window specified(maeking it stay in all desktops)|
-|`UnPinWindow(hwnd)`|UnPins the window specified|
+|`PinWindow(hwnd)`|Pins the specified window(maeking it stay in all desktops)|
+|`UnPinWindow(hwnd)`|UnPins the specified window|
 |`IsPinnedWindow(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
-|`PinApp(hwnd)`|Pins the app specified|
-|`UnPinApp(hwnd)`|UnPins the app specified|
+|`PinApp(hwnd)`|Pins the specified app|
+|`UnPinApp(hwnd)`|UnPins the specified app|
 |`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 
 ## Misc:
@@ -58,6 +58,7 @@ Note: When you pin a Window or an App, it will stay in all desktops, Windows rem
 |`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
 
 # Working AHK Example:
+I know it´s a visual mess, just run it and press the hotkeys to test it for yourself, with escape you exit the app
 ```autohotkey
 #Include ...the-dir-with-the-2-files...\AHK_Vitrual_Desktop_Library.ahk
 
@@ -75,16 +76,28 @@ return
 
 x::MoveCurrentWindowToDesktop(3)
 
-a::CallFunctionOnDesktopSwitch(true)
+a::CallFunctionOnDesktopSwitch(true) ; If true calls a funcion named OnDesktopSwitch(), is not obligatory to use
 
 OnDesktopSwitch(){
-	MsgBox, I run every time the desktop changes
+	MsgBox, I run every time the desktop changes, I stop with the key "s"
 }
 
 s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 
 ; You can use this to have your favourite programs in the desktops you want:
-AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ;opens paint always on desktop 3
+AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
+
+;Pin current window(remember to unpin)
+f::
+activeHwnd := GetActiveHwnd()
+PinWindow(activeHwnd)
+return
+
+;UpPin current window
+g::
+activeHwnd := GetActiveHwnd()
+UnPinWindow(activeHwnd)
+return
 
 Escape::ExitApp
 ```
