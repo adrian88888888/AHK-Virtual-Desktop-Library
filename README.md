@@ -36,10 +36,9 @@ Note: a lot of functions takes the parameter hwnd, you can use the [Built in Fun
 |`MoveAndGoToDesktop(desktop_number, hwnd)` | Moves current window to the desired desktop and goes to that one /add hwnd parameter to the code|
 
 ## Open specified program on desired desktop every time:
-
 | Functions  |  Description |
 | :------------ | :------------ |
-|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>You can use this to have your favourite programs in the desktops you want.<br/>Only recives 2 parameters: the desktop_number and winClass OR the winTitle OR the winExe, is recomended to use the winClass like the code example.<br/>In this part you can use the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to make it easier|
+|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Only recives 2 parameters: the desktop_number and winClass OR the winTitle OR the winExe, is recomended to use the winClass like the code example.<br/>In this part you can use the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to make it easier|
 |`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
 
 ## Pin/UnPin:
