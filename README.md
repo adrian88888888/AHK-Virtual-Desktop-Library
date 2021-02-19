@@ -134,10 +134,10 @@ Also you probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.
 win+r>sysdm.cpl>enter>advanced options>performance>configuration>Animate windows when minimizing and maximizing>apply>ok
 
 # Credits:
-I want to thank Ciantic because he did the .dll that connects with Windows, thats black magic for me, so thanks<br/>
+I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
 Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
 
-Thanks to lschwahn because he did a complex program and i took ideas from his code<br/>
+Thanks to lschwahn because he did a complex program and I took ideas from his code<br/>
 lschwahn: https://github.com/lschwahn/win-10-virtual-desktop-enhancer<br/>
 
 As a newbie I couldn't find something easy to use, something ready to go, something with documentation, so here it is, that´s the only part where I take credit
