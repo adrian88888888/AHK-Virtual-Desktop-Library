@@ -31,9 +31,9 @@ Note: a lot of functions takes the parameter hwnd, you can use the [Built in Fun
 ## Move windows between desktops:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`MoveCurrentWindowToDesktop(desktop_number)` |  Moves current window to the desired desktop |
-|`MoveWindowToDesktop(desktop_number, hwnd)` |  Moves window to the desired desktop /not done|
-|`MoveAndGoToDesktop(desktop_number, hwnd)` | Moves current window to the desired desktop and goes to that one /add hwnd parameter to the code|
+|`MoveCurrentWindowToDesktop(desktop_number)`|Moves current window to the desired desktop|
+|`MoveWindowToDesktop(desktop_number, hwnd)`|Moves window to the desired desktop /not done|
+|`MoveAndGoToDesktop(desktop_number, hwnd)`|Moves current window to the desired desktop and goes to that one /add hwnd parameter to the code|
 
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
@@ -55,7 +55,8 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 ## Misc:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
+|`CallFunctionOnDesktopSwitch(bool)`|If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
+|`OpenDesktopManager()`|Call again to close|
 
 ## Usefull Built in Functions:
 They will make your life easier(maybe)<br/>
@@ -75,6 +76,7 @@ GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start t
 
 q::GoToNextDesktop()
 w::GoToPrevDesktop()
+e::OpenDesktopManager() ; press again to close
 
 1::GoToDesktopNumber(1)
 2::GoToDesktopNumber(2)
