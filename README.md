@@ -49,7 +49,7 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 
 # Working AHK Example:
 ```autohotkey
-#Include AHK_Vitrual_Desktop_Library.ahk
+#Include ...the-dir-with-the-2-files...\AHK_Vitrual_Desktop_Library.ahk
 
 q::GoToNextDesktop()
 w::GoToPrevDesktop()
@@ -71,7 +71,7 @@ OnDesktopSwitch(){
 	MsgBox, I run every time the desktop changes
 }
 
-s::CallFunctionOnDesktopSwitch(false)
+s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 
 AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ;opens paint always on desktop 3
 
