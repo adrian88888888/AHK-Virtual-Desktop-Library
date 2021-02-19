@@ -42,7 +42,7 @@ Note: a lot of functions takes the parameter hwnd, you can use the built in `Get
 |`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
 
 ## Pin/UnPin:
-When you pin a Window or an App, it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
+Note: When you pin a Window or an App, it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
 | Functions  |  Description |
 | :------------ | :------------ |
 |`PinWindow(hwnd)`|Pins the window specified(maeking it stay in all desktops)|
