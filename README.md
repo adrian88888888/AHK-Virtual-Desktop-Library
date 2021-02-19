@@ -45,7 +45,7 @@ Note: a lot of functions takes the parameter hwnd, you can use the built in func
 When you pin a Window or an App, it means that it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
 | Functions  |  Description |
 | :------------ | :------------ |
-|`PinWindow(hwnd)`|Pins the specified window(maeking it stay in all desktops)|
+|`PinWindow(hwnd)`|Pins the specified window(making it stay in all desktops)|
 |`UnPinWindow(hwnd)`|UnPins the specified window|
 |`IsPinnedWindow(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 |`PinApp(hwnd)`|Pins the specified app|
