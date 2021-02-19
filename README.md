@@ -60,13 +60,15 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`OpenDesktopManager()`|Call again to close|
 
 ## Usefull Built in Functions:
-They will make your life easier(maybe)<br/>
-Remember that when Ctrl+C on an MsgBox you copy his content!
+Meant to make it easier<br/>
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`GetActiveClass()`|Returns the class of the active window|
 |`GetActiveExe()`|Returns the exe of the active window|
+|`CopyActiveHwnd()`|Copies into the clipboard the hwnd of the active window|
+|`CopyActiveClass()`|Copies into the clipboard the class of the active window|
+|`CopyActiveExe()`|Copies into the clipboard the exe of the active window|
 
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
@@ -107,10 +109,9 @@ AlwaysOpenOnDesktopNumber(3,"MSPaintApp")
 AlwaysOpenOnDesktopNumber(1,,"Notepad.exe")
 
 ; to get the class easier:
-r::
-activeClass := GetActiveClass()
-MsgBox, The active Class is "%activeClass%" remember that when Ctrl+C on an MsgBox you copy his content!
-return
+r::CopyActiveHwnd() ; thats it, just paste it wherever you want
+t::CopyActiveClass()
+y::CopyActiveExe()
 
 ;Pin current window(remember to unpin)
 f::
@@ -150,4 +151,5 @@ As a newbie I couldn't find something easy to use, something ready to go, someth
 
 Credits to Fanatic Guru for the [[Class] WinHook](https://www.autohotkey.com/boards/viewtopic.php?t=59149 "[Class] WinHook")
 
+Thanks SKAN for the [function that copies to the clipboard](http://https://www.autohotkey.com/boards/viewtopic.php?f=6&t=80706&hilit=SetClipboardHTML "function that copies to the clipboard")
 Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/VirtualDesktopAccessor/issues/4 "here"), it was really usefull
