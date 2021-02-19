@@ -108,7 +108,7 @@ AlwaysOpenOnDesktopNumber(3,"MSPaintApp")
 ; opens notepad always on desktop 1 using his winExe:
 AlwaysOpenOnDesktopNumber(1,,"Notepad.exe")
 
-; to get the class easier:
+; to get the hwnd, class and exe easier:
 r::CopyActiveHwnd() ; thats it, just paste it wherever you want
 t::CopyActiveClass()
 y::CopyActiveExe()
