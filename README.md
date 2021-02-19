@@ -57,6 +57,16 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 | :------------ | :------------ |
 |`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
 
+## Usefull Built in Functions:
+They will make your life easier
+Remember that when Ctrl+C on an MsgBox you copy his content!
+| Functions  |  Description |
+| :------------ | :------------ |
+|`GetActiveHwnd()`|Returns the hwnd of the active window|
+|`GetActiveClass()`|Returns the class of the active window|
+|`GetActiveTitle()`|Returns the title of the active window|
+|`GetActiveExe()`|Returns the exe of the active window|
+
 # Working AHK Example:
 I know it´s a visual mess, just run it and press the hotkeys to test it for yourself, with escape you exit the app
 ```autohotkey
@@ -86,6 +96,12 @@ s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 
 ; You can use this to have your favourite programs in the desktops you want:
 AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
+
+; to get the class easier:
+r::
+activeClass := GetActiveClass()
+MsgBox, The active Class is %activeClass% ; Remember that when Ctrl+C on an MsgBox you copy his content!
+return
 
 ;Pin current window(remember to unpin)
 f::
