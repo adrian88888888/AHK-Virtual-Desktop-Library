@@ -69,7 +69,7 @@ Remember that when Ctrl+C on an MsgBox you copy his content!
 |`GetActiveExe()`|Returns the exe of the active window|
 
 # Working AHK Example:
-I know it´s a visual mess, just run it and press the hotkeys to test it for yourself, with escape you exit the app
+I put a bunch of hotkeys together so you can test it for yourself, with escape you exit the app
 ```autohotkey
 #Include ...the-dir-with-the-2-files...\AHK_Vitrual_Desktop_Library.ahk
 
