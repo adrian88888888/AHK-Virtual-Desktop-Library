@@ -71,7 +71,7 @@ I put a bunch of hotkeys together so you can test it for yourself, with escape y
 ```autohotkey
 #Include ...the-dir-with-the-files...\AHK_Vitrual_Desktop_Library.ahk
 
-GoToDesktopNumber(2) ; tip: if you call this at the beginning and run the script at the starting of windows, you will start always on the desktop you want
+GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
 
 q::GoToNextDesktop()
 w::GoToPrevDesktop()
