@@ -97,6 +97,7 @@ s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 
 ; You can use this to have your favourite programs in the desktops you want:
 AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
+; "MSPaintApp" is the class of paint
 
 ; to get the class easier:
 r::
