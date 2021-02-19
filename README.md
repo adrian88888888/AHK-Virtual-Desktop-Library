@@ -56,7 +56,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 | Functions  |  Description |
 | :------------ | :------------ |
 |`CallFunctionOnDesktopSwitch(bool)`|If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
-|`FocusLastIfOnDesktop()`|This is one of the things you can put inside `OnDesktopSwitch()` function, if you go to another desktop and everything is minimized it will press alt tab|
+|`FocusLastIfOnDesktop()`|This is one of the things you can put inside `OnDesktopSwitch()` function: if you go to another desktop and everything is minimized it will press alt tab|
 |`OpenDesktopManager()`|Call again to close|
 
 ## Usefull Built in Functions:
@@ -94,6 +94,8 @@ a::CallFunctionOnDesktopSwitch(true) ; If true calls a funcion named OnDesktopSw
 
 OnDesktopSwitch(){
 	MsgBox, I run every time the desktop changes, I stop with the key "s"
+	; one of the things you can put here is FocusLastIfOnDesktop(): if you go to another desktop 
+	; and everything is minimized it will press alt tab
 }
 
 s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
