@@ -121,16 +121,16 @@ Escape::ExitApp
 ```
 
 # Installation:
-1. Download the ".ahk" file and the "VirtualDesktopAccessor.dll"
-2. Does not matter where you put the folder but the 2 files have to be in the SAME folder
-3. Then include in your script the ahk library like this:
+Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
+1. you probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe"), if they are not installed already
+2. Download all the files
+3. Does not matter where you put them, but the files have to be in the SAME folder
+4. Then include in your script the ahk library like this:
 ```autohotkey
-#Include ...the-dir-with-the-2-files...\AHK_Vitrual_Desktop_Library.ahk
+#Include ...the-dir-with-the-files...\AHK_Vitrual_Desktop_Library.ahk
 ```
-4. This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
-Also you probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe"), if they are not installed already
-5. I really recomend trying deactivating the animation of changing desktops, search it on google or:<br/>
-win+r>sysdm.cpl>enter>advanced options>performance>configuration>Animate windows when minimizing and maximizing>apply>ok
+5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
+win+r>sysdm.cpl>enter>advanced options>performance>configuration>UnTic the Animate windows when minimizing and maximizing>apply>ok
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
