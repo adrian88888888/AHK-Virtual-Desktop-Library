@@ -37,8 +37,8 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|Every time you open the a specified program(does not matter how) it will open in the desired desktop|
-|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Every time you open the a specified program(does not matter how) it will open in the desired desktop and move to that one/add new parameters to the code|
+|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|Every time you open the a specified program(does not matter how) it will open in the desired desktop, you can use this to have your favourite programs in the desktops you want|
+|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
 
 ## Misc:
 | Functions  |  Description |
