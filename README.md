@@ -10,13 +10,14 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 
 # Documentation:
 
+Note: a lot of functions takes the parameter hwnd, you can use the built in `GetActiveHwnd()` to get the active hwnd
+
 ## Do basic stuff:
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GoToDesktopNumber(desktop_number)` |  Goes to the desired desktop |
 |`GoToNextDesktop()` |  Goes to the next desktop |
 |`GoToPrevDesktop()`  |  Goes to the previous desktop |
-
 
 ## Return information:
 | Functions  |  Description |
@@ -44,19 +45,17 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 When you pin a Window or an App, it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
 | Functions  |  Description |
 | :------------ | :------------ |
-|`PinWindow(hwnd)`||
-|`UnPinWindow(hwnd)`||
+|`PinWindow(hwnd)`|Pins the window specified(maeking it stay in all desktops)|
+|`UnPinWindow(hwnd)`|UnPins the window specified|
 |`IsPinnedWindow(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
-|`PinApp(hwnd)`||
-|`UnPinApp(hwnd)`||
+|`PinApp(hwnd)`|Pins the app specified|
+|`UnPinApp(hwnd)`|UnPins the app specified|
 |`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 
 ## Misc:
 | Functions  |  Description |
 | :------------ | :------------ |
 |`CallFunctionOnDesktopSwitch(bool)` |  If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function, is not obligatory to use|
-|`Pin()`|When you pin a Window, it will stay in all desktops, note: Windows remember pins even if the script closes, so remember to unpin if you want that|
-|`UnPin()`|implement|
 
 # Working AHK Example:
 ```autohotkey
