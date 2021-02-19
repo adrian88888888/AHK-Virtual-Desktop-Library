@@ -67,9 +67,11 @@ Remember that when Ctrl+C on an MsgBox you copy his content!
 |`GetActiveExe()`|Returns the exe of the active window|
 
 # Working AHK Example:
-I put a bunch of hotkeys together so you can test it for yourself, with escape you exit the app
+I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
 ```autohotkey
-#Include ...the-dir-with-the-2-files...\AHK_Vitrual_Desktop_Library.ahk
+#Include ...the-dir-with-the-files...\AHK_Vitrual_Desktop_Library.ahk
+
+GoToDesktopNumber(2) ; tip: if you call this at the beginning and run the script at the starting of windows, you will start always on the desktop you want
 
 q::GoToNextDesktop()
 w::GoToPrevDesktop()
