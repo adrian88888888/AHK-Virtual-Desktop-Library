@@ -88,6 +88,8 @@ Escape::ExitApp
 ```
 4. This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
 Also you probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe"), if they are not installed already
+5. I recomend a lot deactivating the animation of changing desktops, search it on google or:<br/>
+win+r>sysdm.cpl>enter>advanced options>performance>configuration>Animate windows when minimizing and maximizing>apply>ok
 
 # Credits:
 I want to thank Ciantic because he did the .dll that connects with Windows, thats black magic for me, so thanks<br/>
