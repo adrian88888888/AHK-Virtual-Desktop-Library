@@ -38,8 +38,8 @@ Note: a lot of functions takes the parameter hwnd, you can use the [Built in Fun
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winTitle, winExe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Only recives 2 parameters: the desktop_number and winClass OR the winTitle OR the winExe, is recomended to use the winClass like the code example.<br/>In this part you can use the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to make it easier|
-|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winTitle, winExe)`|Same as above, but also goes to that desktop|
+|`AlwaysOpenOnDesktopNumber(desktop_number, winClass, winExe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Only recives 2 parameters: the desktop_number and winClass OR the winExe, is recomended to use the winClass like the code example.<br/>In this part you can use the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to make it easier|
+|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winClass, winExe)`|Same as above, but also goes to that desktop|
 
 ## Pin/UnPin:
 When you pin a Window or an App, it means that it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
@@ -95,10 +95,10 @@ OnDesktopSwitch(){
 s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 
 ; You can use this to have your favourite programs in the desktops you want:
-AlwaysOpenOnDesktopNumber(3,"MSPaintApp") ; opens paint always on desktop 3
-; "MSPaintApp" is the class of paint
-; Other example to open paint always on desktop 3 using the winExe
-; AlwaysOpenOnDesktopNumber(1,,,"mspaint.exe")
+; opens paint always on desktop 3 using his winClass:
+AlwaysOpenOnDesktopNumber(3,"MSPaintApp")
+; opens notepad always on desktop 1 using his winExe:
+AlwaysOpenOnDesktopNumber(1,,,"Notepad.exe")
 
 ; to get the class easier:
 r::
