@@ -12,7 +12,7 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 
 Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd
 
-## Do basic stuff:
+## Navigate between desktops:
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GoToDesktopNumber(desktop_number)` |  Goes to the desired desktop |
