@@ -64,7 +64,6 @@ Remember that when Ctrl+C on an MsgBox you copy his content!
 | :------------ | :------------ |
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`GetActiveClass()`|Returns the class of the active window|
-|`GetActiveTitle()`|Returns the title of the active window|
 |`GetActiveExe()`|Returns the exe of the active window|
 
 # Working AHK Example:
