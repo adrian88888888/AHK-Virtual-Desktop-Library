@@ -104,7 +104,7 @@ s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
 ; opens paint always on desktop 3 using his winClass:
 AlwaysOpenOnDesktopNumber(3,"MSPaintApp")
 ; opens notepad always on desktop 1 using his winExe:
-AlwaysOpenOnDesktopNumber(1,,,"Notepad.exe")
+AlwaysOpenOnDesktopNumber(1,,"Notepad.exe")
 
 ; to get the class easier:
 r::
