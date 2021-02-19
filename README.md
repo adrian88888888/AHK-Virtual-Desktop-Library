@@ -151,6 +151,6 @@ As a newbie I couldn't find something easy to use, something ready to go, someth
 
 Credits to Fanatic Guru for the [[Class] WinHook](https://www.autohotkey.com/boards/viewtopic.php?t=59149 "[Class] WinHook")
 
-Thanks SKAN for the [function that copies to the clipboard](http://https://www.autohotkey.com/boards/viewtopic.php?f=6&t=80706&hilit=SetClipboardHTML "function that copies to the clipboard")
+Thanks SKAN for the [function that copies to the clipboard](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=80706&hilit=SetClipboardHTML")
 
 Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/VirtualDesktopAccessor/issues/4 "here"), it was really usefull
