@@ -73,7 +73,7 @@ Meant to make it easier<br/>
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
 ```autohotkey
-#Include ...the-dir-with-the-files...\AHK_Vitrual_Desktop_Library.ahk
+#Include, AHK_Vitrual_Desktop_Library/AHK_Vitrual_Desktop_Library.ahk
 
 GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
 
@@ -131,11 +131,11 @@ Escape::ExitApp
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
 1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
-2. Download all the files
-3. Does not matter where you put them, but the files have to be in the SAME folder
-4. Then include in your script the ahk library like this:
+2. Download the folder AHK_Vitrual_Desktop_Library
+3. Put it in the same folder as your script
+4. Then include it in your script:
 ```autohotkey
-#Include ...the-dir-with-the-files...\AHK_Vitrual_Desktop_Library.ahk
+#Include, AHK_Vitrual_Desktop_Library/AHK_Vitrual_Desktop_Library.ahk
 ```
 5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
 win+r>sysdm.cpl>enter>advanced options>performance>configuration>UnTic the Animate windows when minimizing and maximizing>apply>ok
