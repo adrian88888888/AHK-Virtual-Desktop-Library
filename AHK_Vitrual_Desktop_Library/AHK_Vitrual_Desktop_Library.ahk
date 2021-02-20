@@ -1,5 +1,5 @@
-﻿#Include WinHook.ahk
-#Include SetClipboardHTML.ahk
+﻿#Include AHK_Vitrual_Desktop_Library/WinHook.ahk
+#Include AHK_Vitrual_Desktop_Library/SetClipboardHTML.ahk
 
 DetectHiddenWindows, On
 hwnd:=WinExist("ahk_pid " . DllCall("GetCurrentProcessId","Uint"))
