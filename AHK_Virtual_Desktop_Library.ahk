@@ -1,11 +1,11 @@
-﻿#Include AHK_Virtual_Desktop_Library/WinHook.ahk
-#Include AHK_Virtual_Desktop_Library/SetClipboardHTML.ahk
+﻿#Include lib/WinHook.ahk
+#Include lib/SetClipboardHTML.ahk
 
 DetectHiddenWindows, On
 hwnd:=WinExist("ahk_pid " . DllCall("GetCurrentProcessId","Uint"))
 hwnd+=0x1000<<32
 
-hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "AHK_Virtual_Desktop_Library\VirtualDesktopAccessor.dll", "Ptr") 
+hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "lib\VirtualDesktopAccessor.dll", "Ptr") 
 
 global GoToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GoToDesktopNumber", "Ptr")
 global GetCurrentDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GetCurrentDesktopNumber", "Ptr")
@@ -37,10 +37,8 @@ global ViewGetByLastActivationOrderProc := DllCall("GetProcAddress", Ptr, hVirtu
 
 
 
-
-
+CallAltTabOnSwitchOnDesktopSwitch()
 RestartVirtualDesktopAccessorWhenNeeded()
-
 
 RestartVirtualDesktopAccessorWhenNeeded(){ ; its needed when Explorer.exe crashes or restarts(e.g. when coming from fullscreen game)
 	explorerRestartMsg := DllCall("user32\RegisterWindowMessage", "Str", "TaskbarCreated")
@@ -49,6 +47,12 @@ RestartVirtualDesktopAccessorWhenNeeded(){ ; its needed when Explorer.exe crashe
 
 RestartVirtualDesktopAccessor(){
 	DllCall(RestartVirtualDesktopAccessorProc, UInt, result)
+}
+
+CallAltTabOnSwitchOnDesktopSwitch()
+{
+	DllCall(RegisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
+	OnMessage(0x1400 + 30, "AltTabOnSwitch")
 }
 
 ; Do basic Stuff------------------------------------------
@@ -141,7 +145,6 @@ GetForemostHwndOnDesktopNumber(num) {
 	}
 }
 
-
 ; Open specified program on desired desktop every time-----
 
 AlwaysOpenOnDesktopNumber(num, winClass:="", winExe:=""){
@@ -154,8 +157,17 @@ AlwaysOpenOnDesktopNumber(num, winClass:="", winExe:=""){
 	;GoToDesktopNumber(num)
 ;}
 
-; Pin/UnPin------------------------------------------------
+; Open/Close Desktop---------------------------------------
 
+NewDesktop(){
+	Send, #^d
+}
+
+CloseDesktop(){
+	Send, #^{F4}
+}
+
+; Pin/UnPin------------------------------------------------
 
 PinWindow(hwnd){
 	return DllCall(PinWindowProc, UInt, hwnd)
@@ -183,6 +195,54 @@ IsAppPinned(hwnd){
 
 ; Misc-----------------------------------------------------
 
+AltTabOnSwitch(bool:=False){
+	if (bool == True)
+	{
+		if OnDesktop()
+		{
+			FocusLastWindow()
+		}
+	}
+}
+
+OnDesktop(){ ; algo anda mal en esta funcion
+	activeClass := GetActiveClass()
+	desktopClass := "WorkerW"
+	if (activeClass == desktopClass)
+	{
+		return True
+	}
+	else
+	{
+		return False
+	}
+}
+
+FocusLastWindow(){
+	altTabList := GetAltTabList()
+	lastWindow := altTabList[2]
+	WinActivate, ahk_id %lastWindow%
+}
+;en construccion-----------
+
+;BackgroundSetter(){
+	;currentDesktop := GetCurrentDesktopNumber()
+	;if (currentDesktop == num)
+	;{
+		;ChangeBackground(imgPath)
+	;}
+;}
+
+;SetBackgroundOnDesktop(num, imgPath){
+	
+;}
+
+;ChangeBackground(imgPath){
+	;DllCall("SystemParametersInfo", UInt, 0x14, UInt, 0, Str, imgPath, UInt, 1)	
+;}
+;--------------------------
+
+
 CallFunctionOnDesktopSwitch(bool){
 	if (bool = true)
 	{
@@ -196,73 +256,11 @@ CallFunctionOnDesktopSwitch(bool){
 	}
 }
 
-;OnDesktopSwitch(){
-	;CallByUser()
-	;FocusLastIfOnDesktop()
-;}
-
 OpenDesktopManager(){
 	Send #{Tab}
 }
 
 ; Built in functions---------------------------------------
-
-GetActiveHwnd(){
-	WinGet, activeHwnd, ID, A
-	return activeHwnd
-}
-
-GetActiveClass(){
-	activeHwnd := GetActiveHwnd()
-	WinGetClass, winClass, ahk_id %activeHwnd%
-	return winClass
-}
-
-GetActiveExe(){
-	activeHwnd := GetActiveHwnd()
-	WinGet, winExe, ProcessName, ahk_id %activeHwnd%
-	return winExe
-}
-
-CopyActiveHwnd(){
-	activeHwnd := GetActiveHwnd()
-	SetClipboardHTML("",, activeHwnd)
-}
-
-CopyActiveClass(){
-	activeClass := GetActiveClass()
-	SetClipboardHTML("",, activeClass)
-}
-
-CopyActiveExe(){
-	activeExe := GetActiveExe()
-	SetClipboardHTML("",, activeExe)
-}
-
-; ---------------------------------------------------------
-
-ViewGetFocused(){
-	return DllCall(ViewGetFocusedProc, UInt, hwnd)
-}
-ViewSetFocus(hwnd){
-	return DllCall(ViewSetFocusProc, UInt, hwnd)
-}
-ViewIsShownInSwitchers(hwnd){
-	return DllCall(ViewSetFocusProc, UInt, hwnd)
-}
-
-ViewGetByLastActivationOrder(){
-	return DllCall(ViewGetByLastActivationOrderProc, Int, what goes here?,UINT, what goes here?,BOOL, what is this for?,BOOL,1)
-}
-
-ChangeBackground(imgPath){
-	DllCall("SystemParametersInfo", UInt, 0x14, UInt, 0, Str, imgPath, UInt, 1)	
-}
-;* uint ViewGetByLastActivationOrder(HWND *windows, UINT count, BOOL onlySwitcherWindows, BOOL onlyCurrentDesktop) // Get windows in alt tab order
-
-; Get AltTabWindows-------------------------
-
-
 
 GetAltTabList(){
 	static WS_EX_TOPMOST :=            0x8 ; sets the Always On Top flag
@@ -312,134 +310,60 @@ IsInvisibleWin10BackgroundAppWindow(hWindow){
 	return result ? true : false
 }
 
-  /*
-  DWMWA_CLOAKED: If the window is cloaked, the following values explain why:
-  1  The window was cloaked by its owner application (DWM_CLOAKED_APP)
-  2  The window was cloaked by the Shell (DWM_CLOAKED_SHELL)
-  4  The cloak value was inherited from its owner window (DWM_CLOAKED_INHERITED)
+/*
+	DWMWA_CLOAKED: If the window is cloaked, the following values explain why:
+	1  The window was cloaked by its owner application (DWM_CLOAKED_APP)
+	2  The window was cloaked by the Shell (DWM_CLOAKED_SHELL)
+	4  The cloak value was inherited from its owner window (DWM_CLOAKED_INHERITED)
 */
 
-; end get AltTabWindows-------------------------
-
-FocusLast(){
-	altTabList := GetAltTabList()
-	lastWindow := altTabList[2]
-	WinGetTitle, title, % "ahk_id " altTabList[2]
-	MsgBox, %title%
-	;msgbox, %lastWindow%
-	WinActivate, ahk_id %foremostHwnd%
+GetActiveHwnd(){
+	WinGet, activeHwnd, ID, A
+	return activeHwnd
 }
 
-/*
-
-; agregando funciones-----------
-
-FocusLastIfOnDesktop(){
-	if DesktopIsActive()
-	{
-		FocusLastActive()
-	}
+GetActiveClass(){
+	activeHwnd := GetActiveHwnd()
+	WinGetClass, winClass, ahk_id %activeHwnd%
+	return winClass
 }
 
-DesktopIsActive(){
+GetActiveExe(){
+	activeHwnd := GetActiveHwnd()
+	WinGet, winExe, ProcessName, ahk_id %activeHwnd%
+	return winExe
+}
+
+CopyActiveHwnd(){
+	activeHwnd := GetActiveHwnd()
+	SetClipboardHTML("",, activeHwnd)
+}
+
+CopyActiveClass(){
 	activeClass := GetActiveClass()
-	desktopClass := "WorkerW"
-	if (activeClass == desktopClass)
-	{
-		return True
-	}
-	else
-	{
-		return False
-	}
+	SetClipboardHTML("",, activeClass)
 }
 
-
-FocusLastActive(){
-	cuerrentDesktop := GetCurrentDesktopNumber()
-	lastActive := lastActiveInEachDesktop[cuerrentDesktop]
-	WinActivate, ahk_id %lastActive%
+CopyActiveExe(){
+	activeExe := GetActiveExe()
+	SetClipboardHTML("",, activeExe)
 }
 
-GetLastActiveInEachDesktop(){ ; y si cerre el lastActive?, cada las active deberia ser una lista de last actives
-	cuerrentDesktop := GetCurrentDesktopNumber()
-	lastActive := GetActiveHwnd() ; esto tiene q dar un hwnd
-	
-	desktopHwnd := GetDesktopHwnd()
-	desktopHwnd := GetTaskBarHwnd()
-	
-	if (lastActive not in desktopHwnd,taskbarHwnd) ; Any spaces or tabs around the delimiting commas are significant when using "in"
-	{
-		lastActiveInEachDesktop[cuerrentDesktop] := lastActive
-		return lastActiveInEachDesktop ; nose como se retorna una lista
-	}
-}
-
-SetTimer, GetLastActiveInEachDesktop, 0
+; ---------------------------------------------------------
 
 
-windows := AltTabWindows()
-Gui, Add, ListView, r20 w700, #|ID|Title
-Loop, % windows.length()
-{
-  WinGetTitle, title, % "ahk_id " windows[A_Index]
-  LV_Add("", A_Index, windows[A_Index], title)
-}
-LV_ModifyCol()  ; Auto-size each column to fit its contents.
-Gui, Show
-return
 
-GuiClose:
-Exitapp
+; funciones que intente exportar del .dll---------------
+;ViewGetFocused(){
+	;return DllCall(ViewGetFocusedProc, UInt, hwnd)
+;}
+;ViewSetFocus(hwnd){
+	;return DllCall(ViewSetFocusProc, UInt, hwnd)
+;}
+;ViewIsShownInSwitchers(hwnd){
+	;return DllCall(ViewSetFocusProc, UInt, hwnd)
+;}
 
-AltTabWindows() {
-   static WS_EX_TOPMOST :=            0x8 ; sets the Always On Top flag
-   static WS_EX_APPWINDOW :=      0x40000 ; provides a taskbar button
-   static WS_EX_TOOLWINDOW :=        0x80 ; removes the window from the alt-tab list
-   static GW_OWNER := 4
-
-   AltTabList := {}
-   windowList := ""
-   DetectHiddenWindows, Off ; makes DllCall("IsWindowVisible") unnecessary
-   WinGet, windowList, List ; gather a list of running programs
-   Loop, %windowList%
-      {
-      ownerID := windowID := windowList%A_Index%
-      Loop { ;If the window we found is opened by another application or "child", let's get the hWnd of the parent
-         ownerID := Format("0x{:x}",  DllCall("GetWindow", "UInt", ownerID, "UInt", GW_OWNER))
-      } Until !Format("0x{:x}",  DllCall("GetWindow", "UInt", ownerID, "UInt", GW_OWNER))
-      ownerID := ownerID ? ownerID : windowID
-
-      ; only windows that are not removed from the Alt+Tab list, AND have a taskbar button, will be appended to our list.
-      If (Format("0x{:x}", DllCall("GetLastActivePopup", "UInt", ownerID)) = windowID)
-         {
-         WinGet, es, ExStyle, ahk_id %windowID%
-         If (!((es & WS_EX_TOOLWINDOW) && !(es & WS_EX_APPWINDOW)) && !IsInvisibleWin10BackgroundAppWindow(windowID))
-            AltTabList.Push(windowID)
-         }
-      }
-
-   ; UNCOMMENT THIS FOR TESTING
-   ;WinGetClass, class1, % "ahk_id" AltTabList[1]
-   ;WinGetClass, class2, % "ahk_id" AltTabList[2]
-   ;WinGetClass, classF, % "ahk_id" AltTabList.pop()
-   ;msgbox % "Number of Windows: " AltTabList.length() "`nFirst windowID: " class1 "`nSecond windowID: " class2 "`nFinal windowID: " classF
-   return AltTabList
-}
-
-  IsInvisibleWin10BackgroundAppWindow(hWindow) {
-    result := 0
-    VarSetCapacity(cloakedVal, A_PtrSize) ; DWMWA_CLOAKED := 14
-    hr := DllCall("DwmApi\DwmGetWindowAttribute", "Ptr", hWindow, "UInt", 14, "Ptr", &cloakedVal, "UInt", A_PtrSize)
-    if !hr ; returns S_OK (which is zero) on success. Otherwise, it returns an HRESULT error code
-      result := NumGet(cloakedVal) ; omitting the "&" performs better
-    return result ? true : false
-    }
-
-  /*
-  DWMWA_CLOAKED: If the window is cloaked, the following values explain why:
-  1  The window was cloaked by its owner application (DWM_CLOAKED_APP)
-  2  The window was cloaked by the Shell (DWM_CLOAKED_SHELL)
-  4  The cloak value was inherited from its owner window (DWM_CLOAKED_INHERITED)
-  */
- 
+;ViewGetByLastActivationOrder(){
+	;return DllCall(ViewGetByLastActivationOrderProc, Int, what goes here?,UINT, what goes here?,BOOL, what is this for?,BOOL,1)
+;}
