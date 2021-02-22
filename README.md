@@ -40,6 +40,7 @@ To the newbies: hwnd = ahk_id = it's an id that every window has
 |`GetInWichDesktopTheWindowIs(hwnd)` |  Return in which desktop a given hwnd is /le cambie el nombre a la funcion|
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
 |`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop  /le cambie el orden a los parametros|
+|`GetAltTabList()`|Returns a list of hwnd of the alt tab, the order of the list: from foremost to the one in the back|
 
 ## Move windows between desktops:
 | Functions  |  Description |
@@ -76,7 +77,6 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 Meant to make it easier<br/>
 | Functions  |  Description |
 | :------------ | :------------ |
-|`GetAltTabList()`|Returns a list of hwnd of the alt tab, the order of the list: from foremost to the one in the back|
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`GetActiveClass()`|Returns the class of the active window|
 |`GetActiveExe()`|Returns the exe of the active window|
