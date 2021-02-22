@@ -140,6 +140,12 @@ return
 Escape::ExitApp
 ```
 
+# Origianl ideas to use this library:
+Here goes a list of ideas that mets 2 points: original and usefull
+If you have an usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope beten everione we get a good list
+-go to previous desktop when mouse touches the left and go to next desktop when mouse touches the right
+-Move a window to the next/prev desktop when dragged to the left/right side of the screen
+
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
 1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
