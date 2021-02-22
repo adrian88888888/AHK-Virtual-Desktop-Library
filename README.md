@@ -144,9 +144,9 @@ Escape::ExitApp
 # Usefull ideas to use this library(by the community):
 - Go to the next/prev desktop when mouse touches the left/right side of the screen(idea from adrian88888888)
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen(idea from Ciantic)
-- When you go to another desktop and everything is minimized it will automaticaly focus the last minimized(idea from adrian88888888)
-- Have your favourite programs open always in the desktops you want(no matter how you open them)(idea from adrian88888888)
-- Set a backgound for every desktop(idea from lschwahn)
+- When you go to another desktop and everything is minimized it will automaticaly focus the last minimized(idea from adrian88888888)/todo add link to function
+- Have your favourite programs open always in the desktops you want(no matter how you open them)(idea from adrian88888888)[Function here](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#open-specified-program-on-desired-desktop-every-time "Function here")
+- Set a backgound for every desktop(idea from lschwahn)/todo add link to function
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
