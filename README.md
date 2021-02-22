@@ -14,6 +14,7 @@ For example:
 Index:
 - [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
+- [Usefull ideas by the community to use this library](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Usefull ideas by the community to use this library")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
 
 ------------------
@@ -139,12 +140,14 @@ return
 
 Escape::ExitApp
 ```
-
-# Origianl ideas to use this library:
-Here goes a list of ideas that mets 2 points: original and usefull
-If you have an usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope beten everione we get a good list
--go to previous desktop when mouse touches the left and go to next desktop when mouse touches the right
--Move a window to the next/prev desktop when dragged to the left/right side of the screen
+# Usefull ideas by the community to use this library:
+If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list
+I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
+- Go to the next/prev desktop when mouse touches the left/right side of the screen(idea from adrian88888888)
+- Move a window to the next/prev desktop when dragged to the left/right side of the screen(idea from Ciantic)
+- When you go to another desktop and everything is minimized it will automaticaly focus the last minimized(idea from adrian88888888)
+- Have your favourite programs open always in the desktops you want(no matter how you open them)(idea from adrian88888888)
+- Set a backgound for every desktop(idea from lschwahn)
 
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
