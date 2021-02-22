@@ -1,7 +1,7 @@
 # AHK_Virtual_Desktop_Library
 
 # Introduction:
-In windows 10 you can use virtual desktops, this library gives you functions to manipulate them<br/>
+In Windows you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
 - `GoToDesktopNumber(desktop_number)`
 - `GetCurrentDesktopNumber()`
