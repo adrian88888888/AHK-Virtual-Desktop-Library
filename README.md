@@ -142,13 +142,13 @@ return
 Escape::ExitApp
 ```
 # Usefull ideas to use this library(by the community):
-If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
 - Go to the next/prev desktop when mouse touches the left/right side of the screen(idea from adrian88888888)
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen(idea from Ciantic)
 - When you go to another desktop and everything is minimized it will automaticaly focus the last minimized(idea from adrian88888888)
 - Have your favourite programs open always in the desktops you want(no matter how you open them)(idea from adrian88888888)
 - Set a backgound for every desktop(idea from lschwahn)
+If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list
 
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
