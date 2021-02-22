@@ -12,11 +12,11 @@ For example:
 - and more!
 
 ## Index:
-- [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Usefull ideas by the community to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-by-the-community-to-use-this-library "Usefull ideas by the community to use this library")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
-- [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
+- [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#credits "Credits")
+- [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
 
 ------------------
 
