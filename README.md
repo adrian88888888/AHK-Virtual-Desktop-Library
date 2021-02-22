@@ -58,7 +58,7 @@ To the newbies: hwnd = ahk_id = it's an id that every window has
 ## Open/Close Desktop:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`NewDesktop()`|Opens a new desktop in the current place|
+|`NewDesktop()`|Opens a new desktop|
 |`CloseDesktop()`|Closes current desktop|
 
 ## Pin/UnPin:
