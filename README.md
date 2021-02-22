@@ -178,3 +178,5 @@ Credits to Fanatic Guru for the [[Class] WinHook](https://www.autohotkey.com/boa
 Thanks SKAN for the [function that copies to the clipboard](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=80706&hilit=SetClipboardHTML")
 
 Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/VirtualDesktopAccessor/issues/4 "here"), it was really usefull
+
+And thanks to the ahk community
