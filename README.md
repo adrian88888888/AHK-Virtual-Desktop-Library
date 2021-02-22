@@ -8,9 +8,11 @@ For example:
 - `GetNumberOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
-- `CloseDesktop(desktop_number)`
-- you can open a program always on a specifed desktop, and more!
-
+- you can open a program always on a specifed desktop
+- and more!
+- 
+Index:
+- [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
 
