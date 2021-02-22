@@ -3,13 +3,13 @@
 # Introduction:
 In windows 10 you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
--`GoToDesktopNumber(desktop_number)`
--`GetCurrentDesktopNumber()`
--`GetNumberOfDesktops()`
--`MoveCurrentWindowToDesktop(desktop_number)`
--`NewDesktop(desktop_number)`
--`CloseDesktop(desktop_number)`
--you can open a program always on a specifed desktop, and more!
+- `GoToDesktopNumber(desktop_number)`
+- `GetCurrentDesktopNumber()`
+- `GetNumberOfDesktops()`
+- `MoveCurrentWindowToDesktop(desktop_number)`
+- `NewDesktop(desktop_number)`
+- `CloseDesktop(desktop_number)`
+- you can open a program always on a specifed desktop, and more!
 
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
@@ -18,7 +18,7 @@ For example:
 
 # Documentation:
 
-Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd
+Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd<br/>
 To the newbies: hwnd = ahk_id = it's an id that every window has
 
 ## Navigate between desktops:
