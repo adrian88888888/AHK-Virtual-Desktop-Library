@@ -4,13 +4,13 @@
 In Windows you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
 - `GoToDesktopNumber(desktop_number)`
-- `GetCurrentDesktopNumber()`
 - `GetNumberOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
 - you can open a program always on a specifed desktop
+- `GetAltTabList()`
 - and more!
-- 
+
 Index:
 - [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
