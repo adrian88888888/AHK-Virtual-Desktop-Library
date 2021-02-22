@@ -12,7 +12,7 @@ For example:
 - and more!
 
 ## Index:
-- [Usefull ideas by the community to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-by-the-community-to-use-this-library "Usefull ideas by the community to use this library")
+- [Usefull ideas to use this library(by the community)](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-by-the-community-to-use-this-library "Usefull ideas to use this library(by the community)")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
 - [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#credits "Credits")
@@ -141,7 +141,7 @@ return
 
 Escape::ExitApp
 ```
-# Usefull ideas by the community to use this library:
+# Usefull ideas to use this library(by the community):
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
 - Go to the next/prev desktop when mouse touches the left/right side of the screen(idea from adrian88888888)
