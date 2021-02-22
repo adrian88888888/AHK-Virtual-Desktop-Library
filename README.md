@@ -1,7 +1,7 @@
-# AHK_Vitrual_Desktop_Library
+# AHK_Virtual_Desktop_Library
 
 # Introduction:
-In windows 10 you can use virtual desktops, this library gives you functions to manipulate them, for example: `GoToDesktopNumber(desktop_number)`, `GetCurrentDesktopNumber()`, `GetNumberOfDesktops()`, `MoveCurrentWindowToDesktop(desktop_number)`
+In windows 10 you can use virtual desktops, this library gives you functions to manipulate them, for example: `GoToDesktopNumber(desktop_number)`, `GetCurrentDesktopNumber()`, `GetNumberOfDesktops()`, `MoveCurrentWindowToDesktop(desktop_number)`, `NewDesktop(desktop_number)`, `CloseDesktop(desktop_number)`, you can open a program always on a specifed desktop, and more!
 
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#installation "Installation")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
@@ -73,7 +73,7 @@ Meant to make it easier<br/>
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
 ```autohotkey
-#Include, AHK_Vitrual_Desktop_Library/AHK_Vitrual_Desktop_Library.ahk
+#Include, AHK_Virtual_Desktop_Library/AHK_Virtual_Desktop_Library.ahk
 
 GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
 
@@ -135,7 +135,7 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 3. Put it in the same folder as your script
 4. Then include it in your script:
 ```autohotkey
-#Include, AHK_Vitrual_Desktop_Library/AHK_Vitrual_Desktop_Library.ahk
+#Include, AHK_Virtual_Desktop_Library/AHK_Virtual_Desktop_Library.ahk
 ```
 5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
 win+r>sysdm.cpl>enter>advanced options>performance>configuration>UnTic the Animate windows when minimizing and maximizing>apply>ok
