@@ -11,6 +11,7 @@ In windows 10 you can use virtual desktops, this library gives you functions to 
 # Documentation:
 
 Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd
+To the newbies: hwnd = ahk_id = it's an id that every window has
 
 ## Navigate between desktops:
 | Functions  |  Description |
@@ -63,6 +64,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 Meant to make it easier<br/>
 | Functions  |  Description |
 | :------------ | :------------ |
+|`GetAltTabList()`|Returns a list of hwnd of the alt tab, the order of the list: from foremost to the one in the back|
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`GetActiveClass()`|Returns the class of the active window|
 |`GetActiveExe()`|Returns the exe of the active window|
@@ -73,7 +75,7 @@ Meant to make it easier<br/>
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
 ```autohotkey
-#Include, AHK_Virtual_Desktop_Library/AHK_Virtual_Desktop_Library.ahk
+#Include, AHK_Virtual_Desktop_Library.ahk
 
 GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
 
@@ -131,14 +133,15 @@ Escape::ExitApp
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
 1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
-2. Download the folder AHK_Vitrual_Desktop_Library
-3. Put it in the same folder as your script
-4. Then include it in your script:
+2. Download the file AHK_Vitrual_Desktop_Library.ahk and the folder lib
+3. Put them in the same folder as your script
+4. You should end up with your script, the AHK_Vitrual_Desktop_Library.ahk and the lib folder, all in the same folder
+6. Then include it in your script:
 ```autohotkey
-#Include, AHK_Virtual_Desktop_Library/AHK_Virtual_Desktop_Library.ahk
+#Include, AHK_Virtual_Desktop_Library.ahk
 ```
 5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
-win+r>sysdm.cpl>enter>advanced options>performance>configuration>UnTic the Animate windows when minimizing and maximizing>apply>ok
+Win+r > sysdm.cpl > enter > advanced options > performance > configuration > UnTic the Animate windows when minimizing and maximizing > apply > ok
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
