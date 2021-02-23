@@ -271,7 +271,15 @@ CallFunctionOnDesktopSwitch(bool){
 }
 
 OpenDesktopManager(){
-	Send #{Tab}
+	Send, #{Tab}
+}
+
+OpenAltTab(){
+	Send, ^!{Tab}
+}
+
+ShowHideDesktop(){
+	Send, #d
 }
 
 ; Built in functions---------------------------------------
@@ -370,9 +378,6 @@ GetActiveTitle(){
 	WinGetTitle, winTitle, ahk_id %activeHwnd%
 	return winTitle
 }
-
-
-
 
 IsFullScreenMode(ExeExceptions:=0){
 	activeExe := GetActiveExe()
