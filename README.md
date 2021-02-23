@@ -41,7 +41,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
 |`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop  /le cambie el orden a los parametros|
 |`GetAltTabList()`|Returns a list of hwnd of the alt tab, the order of the list: from foremost to the one in the back|
-|`IsFullScreenMode(ExesToIgnore)`|Returns True if you are in full screen mode<br/>Returns False if you are in window mode<br/>ExesToIgnore you can leave it empty, or you can pass an array of winExe´s, it will ignore those, even if they are in full screen it will return false eg. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```|
+|`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>you can leave `ExesToIgnore` empty, or you can pass an array of winExe´s and it will ignore those, even if they are in full screen it will return false eg. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```|
 
 ## Move windows between desktops:
 | Functions  |  Description |
