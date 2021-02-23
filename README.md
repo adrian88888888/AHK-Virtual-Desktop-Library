@@ -81,6 +81,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`OpenDesktopManager()`|If you call it again it closes it|
 |`OpenAltTab()`|Same as Ctrl+Alt+Tab /todo: create function|
 |`FocusLastWindow()`|Exactly like Alt+Tab, but does not send Alt+Tab, it´s an imitation|
+|`ShowHideDesktop()`|Show/hide desktop, sends Win+D|
 
 ## Usefull Built in Functions:
 Meant to make it easier<br/>
