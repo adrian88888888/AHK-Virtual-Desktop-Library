@@ -23,7 +23,7 @@ For example:
 # Documentation:
 
 Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd<br/>
-To the newbies: hwnd = ahk_id = it's an id that every window has
+To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 
 ## Navigate between desktops:
 | Functions  |  Description |
