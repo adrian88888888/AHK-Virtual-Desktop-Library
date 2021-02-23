@@ -12,7 +12,7 @@ For example:
 - and more!
 
 ## Index:
-- [Usefull ideas to use this library(by the community)](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-to-use-this-libraryby-the-community "Usefull ideas to use this library(by the community)")
+- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
 - [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#working-ahk-example "Working ahk example")
 - [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#documentation "Documentation")
 - [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#credits "Credits")
@@ -41,6 +41,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
 |`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop  /le cambie el orden a los parametros|
 |`GetAltTabList()`|Returns a list of hwnd of the alt tab, the order of the list: from foremost to the one in the back|
+|`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>`ExesToIgnore` parameter: You can leave it empty or you can pass an array to it of .exe´s, and it will ignore those, so even if they are in full screen it will return `False`<br/>Eg. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```<br/>Use the funtion `CopyActiveExe()` in the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to get the exe easier|
 
 ## Move windows between desktops:
 | Functions  |  Description |
@@ -78,7 +79,9 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`AltTabOnSwitch(bool)`|If true when you go to another desktop and everything is minimized it will automaticaly alt+tab(it does not send the keystrokes Alt+Tab because I tryed and looks bad and has bugs, the script imitates alt tab, does not use it)|
 |`CallFunctionOnDesktopSwitch(bool)`|If true calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function|
 |`OpenDesktopManager()`|If you call it again it closes it|
-|FocusLastWindow()|Exactly like Alt+Tab, but does not send Alt+Tab, it´s an imitation|
+|`OpenAltTab()`|Same as Ctrl+Alt+Tab /todo: create function|
+|`FocusLastWindow()`|Exactly like Alt+Tab, but does not send Alt+Tab, it´s an imitation|
+|`ShowHideDesktop()`|Show/hide desktop, sends Win+D|
 
 ## Usefull Built in Functions:
 Meant to make it easier<br/>
@@ -148,12 +151,13 @@ return
 
 Escape::ExitApp
 ```
-# Usefull ideas to use this library(by the community):
+# Usefull ideas to use this library:
 - Go to the next/prev desktop when mouse touches the left/right side of the screen(idea from adrian88888888)
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen(idea from Ciantic)
 - When you go to another desktop and everything is minimized it will automaticaly focus the last minimized(idea from adrian88888888)/todo add link to function
 - Have your favourite programs open always in the desktops you want(no matter how you open them)(idea from adrian88888888)[Function here](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#open-specified-program-on-desired-desktop-every-time "Function here")
 - Set a backgound for every desktop(idea from lschwahn)/todo add link to function
+- Pressing a key and draging the mouse to one corner will `OpenDesktopManager()`(idea from ios)[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#misc "Function in this table")
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
