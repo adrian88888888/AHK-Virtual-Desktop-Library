@@ -371,17 +371,37 @@ GetActiveTitle(){
 	return winTitle
 }
 
-isWindowFullScreen(winTitle){
-	winID := WinExist(winTitle)
-	If ( !winID )
-		Return false
-	WinGet style, Style, ahk_id %WinID%
-	WinGetPos ,,,winW,winH, %winTitle%
-	; 0x800000 is WS_BORDER.
-	; 0x20000000 is WS_MINIMIZE.
-	; no border and not minimized
-	Return ((style & 0x20800000) or winH < A_ScreenHeight or winW < A_ScreenWidth) ? false : true
+
+ExeExceptions := ["atom.exe", "GitHubDesktop.exe", "chrome.exe"]
+
+IsFullScreenMode(ExeExceptions:=0){
+	activeExe := GetActiveExe()
+	If ExeExceptions
+	{
+		activeExe := GetActiveExe()
+		if activeExe in ExeExceptions
+		{
+			return False
+		}
+	}
+	If OnDesktop() ; desktop is actually full screen
+	{
+		return False
+	}
+	else
+	{
+		activeHwnd := GetActiveHwnd()
+		WinGet style, Style, ahk_id %activeHwnd%
+		WinGetPos, , , winW, winH, ahk_id %activeHwnd%
+		; 0x800000 is WS_BORDER.
+		; 0x20000000 is WS_MINIMIZE.
+		
+		; if no border and not minimized return true or false
+		Return ((style & 0x20800000) or winH < A_ScreenHeight or winW < A_ScreenWidth) ? false : true
+		
+	}
 }
+
 
 ; funciones que intente exportar del .dll---------------
 ;ViewGetFocused(){
