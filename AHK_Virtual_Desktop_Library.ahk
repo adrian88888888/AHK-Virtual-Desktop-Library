@@ -36,8 +36,6 @@ global ViewIsShownInSwitchersProc := DllCall("GetProcAddress", Ptr, hVirtualDesk
 global ViewGetByLastActivationOrderProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewGetByLastActivationOrder", "Ptr")
 
 
-
-CallAltTabOnSwitchOnDesktopSwitch()
 RestartVirtualDesktopAccessorWhenNeeded()
 
 RestartVirtualDesktopAccessorWhenNeeded(){ ; its needed when Explorer.exe crashes or restarts(e.g. when coming from fullscreen game)
@@ -49,11 +47,7 @@ RestartVirtualDesktopAccessor(){
 	DllCall(RestartVirtualDesktopAccessorProc, UInt, result)
 }
 
-CallAltTabOnSwitchOnDesktopSwitch()
-{
-	DllCall(RegisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
-	OnMessage(0x1400 + 30, "AltTabOnSwitch")
-}
+
 
 ; Do basic Stuff------------------------------------------
 
@@ -195,17 +189,27 @@ IsAppPinned(hwnd){
 
 ; Misc-----------------------------------------------------
 
-AltTabOnSwitch(bool:=False){
-	if (bool == True)
+AltTabOnSwitch(bool){
+	if (bool = true)
 	{
-		if OnDesktop()
-		{
-			FocusLastWindow()
-		}
+		DllCall(RegisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
+		OnMessage(0x1400 + 30, "AltTab")
+	}
+	if (bool = false)
+	{
+		DllCall(UnregisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
+		OnMessage(0x1400 + 30, "AltTab")
 	}
 }
 
-OnDesktop(){ ; algo anda mal en esta funcion
+AltTab(){ ; mejorar el nombre de esta funcion
+	if OnDesktop()
+	{
+		FocusLastMinimized()
+	}
+}
+
+OnDesktop(){
 	activeClass := GetActiveClass()
 	desktopClass := "WorkerW"
 	if (activeClass == desktopClass)
@@ -218,10 +222,20 @@ OnDesktop(){ ; algo anda mal en esta funcion
 	}
 }
 
+FocusLastMinimized(){
+	altTabList := GetAltTabList()
+	lastWindow := altTabList[1]
+	WinActivate, ahk_id %lastWindow%
+	;WinGetTitle, x, ahk_id %lastWindow%
+	;MsgBox, %x%
+}
+
 FocusLastWindow(){
 	altTabList := GetAltTabList()
 	lastWindow := altTabList[2]
 	WinActivate, ahk_id %lastWindow%
+	;WinGetTitle, x, ahk_id %lastWindow%
+	;MsgBox, %x%
 }
 ;en construccion-----------
 
@@ -351,7 +365,23 @@ CopyActiveExe(){
 
 ; ---------------------------------------------------------
 
+GetActiveTitle(){
+	activeHwnd := GetActiveHwnd()
+	WinGetTitle, winTitle, ahk_id %activeHwnd%
+	return winTitle
+}
 
+isWindowFullScreen(winTitle){
+	winID := WinExist(winTitle)
+	If ( !winID )
+		Return false
+	WinGet style, Style, ahk_id %WinID%
+	WinGetPos ,,,winW,winH, %winTitle%
+	; 0x800000 is WS_BORDER.
+	; 0x20000000 is WS_MINIMIZE.
+	; no border and not minimized
+	Return ((style & 0x20800000) or winH < A_ScreenHeight or winW < A_ScreenWidth) ? false : true
+}
 
 ; funciones que intente exportar del .dll---------------
 ;ViewGetFocused(){
