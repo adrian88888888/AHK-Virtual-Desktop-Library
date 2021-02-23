@@ -61,7 +61,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`NewDesktop()`|Opens a new desktop|
 |`CloseDesktop()`|Closes current desktop|
 
-## Pin/UnPin:
+## Pin/UnPin Windows:
 When you pin a Window or an App, it means that it will stay in all desktops, Windows remember pins even if the script closes, so remember to unpin if you want to
 | Functions  |  Description |
 | :------------ | :------------ |
