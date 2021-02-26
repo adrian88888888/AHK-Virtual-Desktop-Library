@@ -1,6 +1,6 @@
-﻿MoveCurrentWindowToDesktop(num) {
+﻿MoveCurrentWindowToDesktop(num){
 	activeHwnd := GetActiveHwnd()
-	DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, num-1)
+	DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, num - 1)
 	FocusForemostHwndOnCurrentDesktop()
 }
 
@@ -12,7 +12,7 @@ MoveWindowToDesktop(num, hwndToMove){
 	}
 	else
 	{
-		DllCall(MoveWindowToDesktopNumberProc, UInt, hwndToMove, UInt, num-1)
+		DllCall(MoveWindowToDesktopNumberProc, UInt, hwndToMove, UInt, num - 1)
 	}
 }
 
@@ -22,8 +22,8 @@ FocusForemostHwndOnCurrentDesktop(){
 	WinActivate, ahk_id %foremostHwnd%
 }
 
-GetForemostHwndOnDesktopNumber(num) {
-	WinGet hwndsList, list ; hwndsList contains a list of windows hwndÂ´s (ordered from the foremost to the one in the back) for each desktop
+GetForemostHwndOnDesktopNumber(num){
+	WinGet hwndsList, list ; hwndsList contains a list of windows hwnd´s (ordered from the foremost to the one in the back) for each desktop
 	Loop % hwndsList {
 		hwnd := % hwndsList%A_Index%
 		windowIsOnDesktop := IsWindowOnDesktopNumber(num, hwnd)

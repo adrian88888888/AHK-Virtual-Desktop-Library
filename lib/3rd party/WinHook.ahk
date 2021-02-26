@@ -4,7 +4,7 @@
 ;
 ; Class to set hooks of windows or processes
 ;
-;{============================	
+;{============================
 ;
 ;	Class (Nested):		WinHook.Shell
 ;
@@ -48,9 +48,9 @@
 ;
 ;		Desc: Function Called on Event
 ;			FuncOrMethod(Win_Hwnd, Win_Title, Win_Class, Win_Exe, Win_Event)
-;		
+;
 ;		Parameters:
-;		1) {Win_Hwnd}		window handle ID of window with event 
+;		1) {Win_Hwnd}		window handle ID of window with event
 ;   	2) {Win_Title}		window Title of window with event
 ;   	3) {Win_Class}		window Class of window with event
 ;   	4) {Win_Exe}			window Exe of window with event
@@ -72,12 +72,12 @@
 ;		Method:		Remove(Index)
 ;		Method:		Deregister()
 ;
-;{============================	
+;{============================
 ;
 ;	Class (Nested):		WinHook.Event
 ;
 ;		Method:
-;			Add(eventMin, eventMax, eventProc, idProcess, WinTitle := "") 			
+;			Add(eventMin, eventMax, eventProc, idProcess, WinTitle := "")
 ;
 ;		Desc: Add Event Hook
 ;
@@ -163,7 +163,7 @@
 ;
 ;		Desc: Function Called on Event
 ;			FuncOrMethod(hWinEventHook, event, hwnd, idObject, idChild, dwEventThread, dwmsEventTime)
-;		
+;
 ;		Parameters:
 ;		1) {hWinEventHook}		Handle to an event hook instance.
 ;   	2) {event}						Event that occurred. This value is one of the event constants
@@ -187,7 +187,7 @@
 ;		Method: 	UnHook(hWinEventHook)
 ;		Method: 	UnHookAll()
 ;
-;{============================	
+;{============================
 class WinHook
 {
 	class Shell
@@ -224,14 +224,14 @@ class WinHook
 		Deregister()
 		{
 			DllCall("DeregisterShellHookWindow", UInt, A_ScriptHwnd)
-			WinHook.Shell.Hooks := "", WinHook.Shell.Events := ""		
+			WinHook.Shell.Hooks := "", WinHook.Shell.Events := ""
 		}
 		Message(Event, Hwnd)  ; Private Method
 		{
 			DetectHiddenWindows, On
-			If (WinHook.Shell.Events[Event] or WinHook.Shell.Events[0]) 
+			If (WinHook.Shell.Events[Event] or WinHook.Shell.Events[0])
 			{
-				
+
 				WinGetTitle, wTitle, ahk_id %Hwnd%
 				WinGetClass, wClass, ahk_id %Hwnd%
 				WinGet, wExe, ProcessName, ahk_id %Hwnd%
@@ -282,7 +282,7 @@ class WinHook
 				DllCall("UnhookWinEvent", "Ptr", hWinEventHook)
 			WinHook.Event.Hooks := "", CB_WinEventProc := ""
 		}
-		Message(event, hwnd, idObject, idChild, dwEventThread, dwmsEventTime)  ; 'Private Method 
+		Message(event, hwnd, idObject, idChild, dwEventThread, dwmsEventTime)  ; 'Private Method
 		{
 			DetectHiddenWindows, On
 			Hook := WinHook.Event.Hooks[hWinEventHook := this] ; this' is hidden param1 because method is called as func
