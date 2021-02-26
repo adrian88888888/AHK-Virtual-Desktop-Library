@@ -190,4 +190,6 @@ Thanks SKAN for the [function that copies to the clipboard](https://www.autohotk
 
 Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/VirtualDesktopAccessor/issues/4 "here"), it was really usefull
 
+Thanks to Icarus for half of the IsFullScreenMode() function [here](https://autohotkey.com/board/topic/38882-detect-fullscreen-application/ "here")
+
 And thanks to the ahk community
