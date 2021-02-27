@@ -4,7 +4,7 @@
 In Windows you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
 - `GoToDesktop(desktop_number)`
-- `GetNumberOfDesktops()`
+- `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
 - you can open a program always on a specifed desktop
@@ -36,7 +36,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GetCurrentDesktopNumber()` | Returns the number of the current desktop  |
-|`GetNumberOfDesktops()`  |  Returns the total number of virtual desktops |
+|`GetAmountOfDesktops()`  |  Returns the total number of virtual desktops |
 |`GetInWichDesktopTheWindowIs(hwnd)` |  Return in which desktop a given hwnd is /le cambie el nombre a la funcion|
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
 |`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop  /le cambie el orden a los parametros|
