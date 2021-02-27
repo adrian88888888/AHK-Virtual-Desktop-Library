@@ -1,4 +1,4 @@
-GoToDesktopNumber(num){
+GoToDesktop(num){
 	BugFix()
 	DllCall(GoToDesktopNumberProc, Int, num - 1)
 	return
@@ -6,16 +6,16 @@ GoToDesktopNumber(num){
 
 GoToNextDesktop(){
 	BugFix()
-	currentDesktop := GetCurrentDesktopNumber()
+	currentDesktop := GetCurrentDesktop()
 	nextDesktop := currentDesktop + 1
-	GoToDesktopNumber(nextDesktop)
+	GoToDesktop(nextDesktop)
 }
 
 GoToPrevDesktop(){
 	BugFix()
-	currentDesktop := GetCurrentDesktopNumber()
+	currentDesktop := GetCurrentDesktop()
 	prevDesktop := currentDesktop - 1
-	GoToDesktopNumber(prevDesktop)
+	GoToDesktop(prevDesktop)
 }
 
 BugFix(){

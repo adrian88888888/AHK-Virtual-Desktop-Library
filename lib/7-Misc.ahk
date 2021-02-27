@@ -13,26 +13,9 @@ AltTabOnSwitch(bool){
 
 FocusLast(){
 	if OnDesktop()
-	{
 		FocusLastMinimized()
-	}
 	else
-	{
 		FocusSecondForemostWindow()
-	}
-}
-
-OnDesktop(){
-	activeClass := GetActiveClass()
-	desktopClass := "WorkerW"
-	if (activeClass == desktopClass)
-	{
-		return True
-	}
-	else
-	{
-		return False
-	}
 }
 
 FocusLastMinimized(){

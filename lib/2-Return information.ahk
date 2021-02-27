@@ -1,12 +1,12 @@
-GetCurrentDesktopNumber(){
+GetCurrentDesktop(){
 	return DllCall(GetCurrentDesktopNumberProc) + 1
 }
 
-GetNumberOfDesktops(){
+GetAmountOfDesktops(){
 	return DllCall(GetDesktopCountProc)
 }
 
-GetInWichDesktopTheWindowIs(hwnd){
+InWichDesktopThisWindowIs(hwnd){
 	return DllCall(GetWindowDesktopNumberProc, int, hwnd) + 1
 }
 
@@ -110,4 +110,51 @@ IsInvisibleWin10BackgroundAppWindow(hWindow){
 		2  The window was cloaked by the Shell (DWM_CLOAKED_SHELL)
 		4  The cloak value was inherited from its owner window (DWM_CLOAKED_INHERITED)
 	*/
+}
+
+OnDesktop(){
+	activeClass := GetActiveClass()
+	desktopClass := "WorkerW"
+	if (activeClass == desktopClass)
+		return True
+	else
+		return False
+}
+
+OnTaskBar(){
+	activeClass := GetActiveClass()
+	taskBarClass := "Shell_TrayWnd"
+	if (activeClass == taskBarClass)
+		return True
+	else
+		return False
+}
+
+GetActiveClass(){
+	activeHwnd := GetActiveHwnd()
+	WinGetClass, winClass, ahk_id %activeHwnd%
+	return winClass
+}
+
+CopyActiveClass(){
+	activeClass := GetActiveClass()
+	SetClipboardHTML("",, activeClass)
+}
+
+; yes, the following funtions are the same, i do it so in the actual code that uses it reads better
+
+OnDesktopToGo(num){ ; why this funtion: if you are tring to go or move a window to a desktop you are, then dont do it!, how? put "if not OnDesktopToGo()"
+	currentDesktop := GetCurrentDesktop()
+	if (currentDesktop == num)
+		return True
+	else
+		return False
+}
+
+OnDesktopToMoveWindowTo(num){ ; why this funtion: if you are tring to go or move a window to a desktop you are, then dont do it!, how? put "if not OnDesktopToGo()"
+	currentDesktop := GetCurrentDesktop()
+	if (currentDesktop == num)
+		return True
+	else
+		return False
 }

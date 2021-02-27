@@ -10,7 +10,6 @@
 #Include lib\6-Pin-UnPin Windows.ahk
 #Include lib\7-Misc.ahk
 #Include lib\8-Built in Functions.ahk
-#Include lib\9-deprecated.ahk
 
 DetectHiddenWindows, On
 hwnd:=WinExist("ahk_pid " . DllCall("GetCurrentProcessId","Uint"))
