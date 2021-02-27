@@ -90,8 +90,10 @@ Meant to make it easier<br/>
 | :------------ | :------------ |
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`CopyActiveHwnd()`|Copies into the clipboard the hwnd of the active window|
+|`IsHwndActive(hwnd)`|Returns `True` if is active and `False` if not, you have to give it a `hwnd` as a parameter|
 |`GetActiveExe()`|Returns the exe of the active window|
 |`CopyActiveExe()`|Copies into the clipboard the exe of the active window|
+|`IsExeActive(exe)`|Returns `True` if is active and `False` if not, you have to give it an `exe` as a parameter|
 
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
