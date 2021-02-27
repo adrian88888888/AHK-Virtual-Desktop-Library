@@ -88,10 +88,8 @@ Meant to make it easier<br/>
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
-|`GetActiveClass()`|Returns the class of the active window|
-|`GetActiveExe()`|Returns the exe of the active window|
 |`CopyActiveHwnd()`|Copies into the clipboard the hwnd of the active window|
-|`CopyActiveClass()`|Copies into the clipboard the class of the active window|
+|`GetActiveExe()`|Returns the exe of the active window|
 |`CopyActiveExe()`|Copies into the clipboard the exe of the active window|
 
 # Working AHK Example:
