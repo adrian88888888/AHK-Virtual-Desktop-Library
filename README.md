@@ -4,7 +4,7 @@
 In Windows you can use virtual desktops, this library gives you functions to fully manipulate them<br/>
 For example:
 - `GoToDesktop(desktop_number)`
-- `GetCurrentDesktopNumber()`
+- `GetCurrentDesktop()`
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
@@ -36,7 +36,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 ## Return information:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`GetCurrentDesktopNumber()` | Returns the number of the current desktop  |
+|`GetCurrentDesktop()` | Returns in wich desktop you are, Eg if you are in desktop 2 it will return 2, if you are in desktop 8 it will return 8 |
 |`GetAmountOfDesktops()`  |  Returns the total number of virtual desktops |
 |`GetInWichDesktopTheWindowIs(hwnd)` |  Return in which desktop a given hwnd is /le cambie el nombre a la funcion|
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
@@ -115,7 +115,7 @@ e::OpenDesktopManager() ; press again to close
 3::GoToDesktop(3)
 
 z::
-currentDesktop := GetCurrentDesktopNumber()
+currentDesktop := GetCurrentDesktop()
 MsgBox, You are on desktop number %currentDesktop%
 return
 
