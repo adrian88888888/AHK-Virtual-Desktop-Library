@@ -67,8 +67,6 @@ return
 |`MoveCurrentWindowToDesktopAndGo(desktop_number)`|Same as above but also goes to that desktop|
 |`MoveWindowToDesktop(desktop_number, hwndToMove)`|Meant to move a background window from the ACTUAL desktop to another<br/><br/>You can get a list of all background windows with `GetAltTabList()`|
 |`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
-|`MoveAllFromCurrentToDesktop(desktop_number)`|moves all windows from the current desktop to the desired one/not implemented yet|
-|`MoveAllFromCurrentToDesktopAndGo(desktop_number)`|Same as above but moves to that desktop/not implemented yet|
 
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
