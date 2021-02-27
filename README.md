@@ -7,7 +7,7 @@ For example:
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
-- you can open a program always on a specifed desktop
+- you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(desktop_number, winExe)`
 - `GetAltTabList()`
 - and more!
 
