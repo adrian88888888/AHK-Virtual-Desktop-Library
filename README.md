@@ -96,7 +96,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 | Functions  |  Description |
 | :------------ | :------------ |
 |`AltTabOnSwitch(bool)`|If `True` when you go to another desktop and everything is minimized it will automaticaly alt+tab(it does not send the keystrokes Alt+Tab because I tryed and looks bad and has bugs, the script imitates alt tab, does not use it)|
-|`CallFunctionOnDesktopSwitch(bool)`|If `True` calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if true then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If false stops calling that function|
+|`CallFunctionOnDesktopSwitch(bool)`|If `True` calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if `True` then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If `False` stops calling that function|
 |`OpenDesktopManager()`|If you call it again it closes it|
 |`OpenAltTab()`|Same as Ctrl+Alt+Tab /todo: create function|
 |`FocusLast()`|Like Alt+Tab, but does not press Alt+Tab, it´s an ahk imitation|
