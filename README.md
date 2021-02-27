@@ -46,7 +46,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 
 ## Move windows between desktops:
 
-Note: im sorry for all functions here having repetitive names, i already combined them for you and dealed with side effects of combineing them(for example flikering)
+Note: Sorry, all functions here have repetitive names, i already combined them for you and dealed with side effects of combineing them(for example flikering)
 so dont combine funtions if you need to, instead use the already combined in the library
 for example instead of this:
 ```autohotkey
