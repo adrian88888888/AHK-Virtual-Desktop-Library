@@ -180,7 +180,7 @@ Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
 Thanks to lschwahn because he did a complex program and I took ideas from his code<br/>
 lschwahn: https://github.com/lschwahn/win-10-virtual-desktop-enhancer<br/>
 
-As a newbie I couldn't find something easy to use, something ready to go, something with documentation, so here it is, that´s the only part where I take credit
+As a newbie I couldn't find something easy to use, something ready to go, something with documentation, so here it is, I also added 19 of my own functions
 
 Credits to Fanatic Guru for the [[Class] WinHook](https://www.autohotkey.com/boards/viewtopic.php?t=59149 "[Class] WinHook")
 
