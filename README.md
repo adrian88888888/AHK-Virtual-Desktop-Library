@@ -4,7 +4,7 @@
 In Windows you can use virtual desktops, this library gives you functions to fully manipulate them<br/>
 For example:
 - `GoToDesktop(desktop_number)`
-- `GetCurrentDesktop()`(returns in wich desktop you are, eg if in desktop 8 it will return 8)
+- `GetCurrentDesktop()`(returns in wich desktop you are, eg: if you are in desktop 8 it will return 8)
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
@@ -36,7 +36,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 ## Return information:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`GetCurrentDesktop()` | Returns in wich desktop you are, eg if you are in desktop 8 it will return 8|
+|`GetCurrentDesktop()` | Returns in wich desktop you are, eg: if you are in desktop 8 it will return 8|
 |`GetAmountOfDesktops()`  |  Returns the total number of virtual desktops|
 |`GetInWichDesktopTheWindowIs(hwnd)` |  Return in which desktop a given hwnd is /le cambie el nombre a la funcion|
 |`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
