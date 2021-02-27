@@ -172,7 +172,7 @@ Escape::ExitApp
 # Usefull ideas to use this library:
 - Go to the next/prev desktop when mouse touches the left/right side of the screen
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen
-- When you go to another desktop and everything is minimized it will automaticaly focus the last minimized/todo add link to function
+- When you go to another desktop and everything is minimized it will automaticaly focus the last minimized with this function `AltTabOnSwitch(True)`
 - Have your favourite programs open always in the desktops you want(no matter how you open them)[Function here](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#open-specified-program-on-desired-desktop-every-time "Function here")
 - Set a backgound for every desktop/todo add link to function
 - Pressing a key and draging the mouse to one corner will `OpenDesktopManager()`[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#misc "Function in this table")
