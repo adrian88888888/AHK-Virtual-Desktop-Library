@@ -45,11 +45,30 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>`ExesToIgnore` parameter: You can leave it empty or you can pass an array to it of .exe´s, and it will ignore those, so even if they are in full screen it will return `False`<br/>Eg. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```<br/>Use the funtion `CopyActiveExe()` in the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to get the exe easier<br><br/>For multimonitor support read the function in the source code|
 
 ## Move windows between desktops:
+
+Note: im sorry for all functions here having repetitive names, i already combined them for you and dealed with side effects of combineing them(for example flikering)
+so dont combine funtions if you need to, instead use the already combined in the library
+for example instead of this:
+```autohotkey
+q::
+MoveCurrentWindowToDesktop(2)
+GoToDesktop(2)
+return
+```
+do this:
+```autohotkey
+q::
+MoveCurrentWindowToDesktopAndGo(2)
+return
+```
 | Functions  |  Description |
 | :------------ | :------------ |
 |`MoveCurrentWindowToDesktop(desktop_number)`|Moves current window to the desired desktop|
-|`MoveWindowToDesktop(desktop_number, hwnd)`|Moves window to the desired desktop /not done|
-|`MoveAndGoToDesktop(desktop_number, hwnd)`|Moves current window to the desired desktop and goes to that one /add hwnd parameter to the code|
+|`MoveCurrentWindowToDesktopAndGo(desktop_number)`|Same as above but also goes to that desktop|
+|`MoveWindowToDesktop(desktop_number, hwndToMove)`|Meant to move a background window from the ACTUAL desktop to another<br/><br/>You can get a list of all background windows with `GetAltTabList()`|
+|`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
+|`MoveAllFromCurrentToDesktop(desktop_number)`|moves all windows from the current desktop to the desired one/not implemented yet|
+|`MoveAllFromCurrentToDesktopAndGo(desktop_number)`|Same as above but moves to that desktop/not implemented yet|
 
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
