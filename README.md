@@ -176,6 +176,7 @@ Escape::ExitApp
 - Have your favourite programs open always in the desktops you want(no matter how you open them)[Function here](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#open-specified-program-on-desired-desktop-every-time "Function here")
 - Set a backgound for every desktop/todo add link to function
 - Pressing a key and draging the mouse to one corner will `OpenDesktopManager()`[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#misc "Function in this table")
+- XButton2 or 5th mouse button or button foward in the mouse to `FocusLast()` without sending the keystroke alt+tab
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
