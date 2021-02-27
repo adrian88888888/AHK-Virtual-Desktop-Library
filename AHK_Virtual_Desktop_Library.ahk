@@ -35,13 +35,6 @@ global IsPinnedAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor
 global PinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "PinApp", "Ptr")
 global UnPinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "UnPinApp", "Ptr")
 
-; todo esto los uso?:
-global ViewIsShownInSwitchersProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewIsShownInSwitchers", "Ptr")
-global ViewIsVisibleProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewIsShownInSwitchers", "Ptr")
-global ViewGetThumbnailHwndProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewGetThumbnailHwnd", "Ptr")
-global ViewGetFocusedProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewGetFocused", "Ptr")
-
-
 RestartVirtualDesktopAccessorOnDemand()
 
 RestartVirtualDesktopAccessorOnDemand(){ ; its needed when Explorer.exe crashes or restarts(e.g. when coming from fullscreen game)

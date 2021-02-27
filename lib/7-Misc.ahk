@@ -11,14 +11,14 @@ AltTabOnSwitch(bool){
 	}
 }
 
-AltTab(){ ; mejorar el nombre de esta funcion
+FocusLast(){
 	if OnDesktop()
 	{
 		FocusLastMinimized()
 	}
 	else
 	{
-		FocusLastWindow()
+		FocusSecondForemostWindow()
 	}
 }
 
@@ -39,16 +39,12 @@ FocusLastMinimized(){
 	altTabList := GetAltTabList()
 	lastWindow := altTabList[1]
 	WinActivate, ahk_id %lastWindow%
-	;WinGetTitle, x, ahk_id %lastWindow%
-	;MsgBox, %x%
 }
 
-FocusLastWindow(){
+FocusSecondForemostWindow(){
 	altTabList := GetAltTabList()
 	lastWindow := altTabList[2]
 	WinActivate, ahk_id %lastWindow%
-	;WinGetTitle, x, ahk_id %lastWindow%
-	;MsgBox, %x%
 }
 ;en construccion-----------
 

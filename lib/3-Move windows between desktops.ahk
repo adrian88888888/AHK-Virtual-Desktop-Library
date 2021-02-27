@@ -1,7 +1,8 @@
 ﻿MoveCurrentWindowToDesktop(num){
 	activeHwnd := GetActiveHwnd()
+	FocusLast()
 	DllCall(MoveWindowToDesktopNumberProc, UInt, activeHwnd, UInt, num - 1)
-	FocusForemostHwndOnCurrentDesktop()
+	; FocusForemostHwndOnCurrentDesktop()
 }
 
 MoveWindowToDesktop(num, hwndToMove){

@@ -4,23 +4,18 @@ GetActiveTitle(){
 	return winTitle
 }
 
-; funciones que intente exportar del .dll---------------
+GetActiveClass(){
+	activeHwnd := GetActiveHwnd()
+	WinGetClass, winClass, ahk_id %activeHwnd%
+	return winClass
+}
 
-; global ViewGetFocusedProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewGetFocused", "Ptr")
-; global ViewSetFocusProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewSetFocus", "Ptr")
-; global ViewIsShownInSwitchersProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewIsShownInSwitchers", "Ptr")
-; global ViewGetByLastActivationOrderProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "ViewGetByLastActivationOrder", "Ptr")
+CopyActiveTitle(){
+	activeTitle := GetActiveTitle()
+	SetClipboardHTML("",, activeTitle)
+}
 
-;ViewGetFocused(){
-	;return DllCall(ViewGetFocusedProc, UInt, hwnd)
-;}
-;ViewSetFocus(hwnd){
-	;return DllCall(ViewSetFocusProc, UInt, hwnd)
-;}
-;ViewIsShownInSwitchers(hwnd){
-	;return DllCall(ViewSetFocusProc, UInt, hwnd)
-;}
-
-;ViewGetByLastActivationOrder(){
-	;return DllCall(ViewGetByLastActivationOrderProc, Int, what goes here?,UINT, what goes here?,BOOL, what is this for?,BOOL,1)
-;}
+CopyActiveClass(){
+	activeClass := GetActiveClass()
+	SetClipboardHTML("",, activeClass)
+}
