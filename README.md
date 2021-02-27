@@ -54,8 +54,8 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`AlwaysOpenOnDesktopNumber(desktop_number, winExe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Requires 2 parameters:<br/>`desktop_number`:The desktop you want it to open the window on<br/>`winExe`: a string with the .exe.<br/>Eg. `AlwaysOpenOnDesktopNumber(3, "Notepad.exe")` <br/><br/>In this part you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Function") `CopyActiveExe()` to make it easier.<br/>If all windows to open in that desktop and not the program you want, that means that the parameters are wrong|
-|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, winExe)`|Same as above, but also goes to that desktop|
+|`AlwaysOpenOnDesktopNumber(desktop_number, exe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Requires 2 parameters:<br/>`desktop_number`:The desktop you want it to open the window on<br/>`exe`: a string with the .exe.<br/>Eg. `AlwaysOpenOnDesktopNumber(3, "Notepad.exe")` <br/><br/>In this part you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Function") `CopyActiveExe()` to make it easier.<br/>If all windows start to open in that desktop, that means that the parameters are wrong|
+|`AlwaysOpenOnDesktopNumberAndGo(desktop_number, exe)`|Same as above, but also goes to that desktop|
 
 ## Open/Close Desktop:
 | Functions  |  Description |
