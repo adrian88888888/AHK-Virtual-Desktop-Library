@@ -4,6 +4,7 @@
 In Windows you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
 - `GoToDesktop(desktop_number)`
+- `GetCurrentDesktopNumber()`
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
