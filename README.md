@@ -3,7 +3,7 @@
 # Introduction:
 In Windows you can use virtual desktops, this library gives you functions to manipulate them<br/>
 For example:
-- `GoToDesktopNumber(desktop_number)`
+- `GoToDesktop(desktop_number)`
 - `GetNumberOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
 - `NewDesktop(desktop_number)`
@@ -28,7 +28,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 ## Navigate between desktops:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`GoToDesktopNumber(desktop_number)` |  Goes to the desired desktop |
+|`GoToDesktop(desktop_number)` |  Goes to the desired desktop |
 |`GoToNextDesktop()` |  Goes to the next desktop |
 |`GoToPrevDesktop()`  |  Goes to the previous desktop |
 
@@ -97,7 +97,7 @@ I put a bunch of hotkeys together so you can test it for yourself, with escape y
 ```autohotkey
 #Include, AHK_Virtual_Desktop_Library.ahk
 
-GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
+GoToDesktop(2) ; tip: if you call this at the beginning of your script and if you start it with windows, you will start windows always on the desktop you want
 
 ; You can use this to have your favourite programs in the desktops you want:
 ; try opening paint with this script running, it will open in desktop 3:
@@ -109,9 +109,9 @@ q::GoToNextDesktop()
 w::GoToPrevDesktop()
 e::OpenDesktopManager() ; press again to close
 
-1::GoToDesktopNumber(1)
-2::GoToDesktopNumber(2)
-3::GoToDesktopNumber(3)
+1::GoToDesktop(1)
+2::GoToDesktop(2)
+3::GoToDesktop(3)
 
 z::
 currentDesktop := GetCurrentDesktopNumber()
