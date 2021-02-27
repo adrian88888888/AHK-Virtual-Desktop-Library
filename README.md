@@ -11,6 +11,7 @@ For example:
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
 - and more!
+- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
 
 ## Index:
 - [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/blob/main/README.md#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
