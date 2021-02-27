@@ -192,4 +192,6 @@ Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/Virt
 
 Thanks to Icarus for half of the `IsFullScreenMode()` function [here](https://autohotkey.com/board/topic/38882-detect-fullscreen-application/ "here")
 
+`GetAltTabList()` took from [here](https://www.autohotkey.com/boards/viewtopic.php?t=46069 "here")
+
 And thanks to the ahk community
