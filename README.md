@@ -39,9 +39,9 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 | :------------ | :------------ |
 |`GetCurrentDesktop()` | Returns in wich desktop you are, for example: if you are in desktop 8 it will return 8|
 |`GetAmountOfDesktops()`  |  Returns the total number of virtual desktops|
-|`GetInWichDesktopTheWindowIs(hwnd)` |  Return in which desktop a given hwnd is /le cambie el nombre a la funcion|
-|`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop /le cambie el nombre|
-|`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop  /le cambie el orden a los parametros|
+|`InWichDesktopThisWindowIs(hwnd)` |  Return in which desktop a given hwnd is|
+|`IsWindowOnCurrentDesktop(hwnd)` |  Return if the given hwnd is in the current desktop|
+|`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop|
 |`GetAltTabList()`|Alt+Tab shows an array of open windows, this funtion returns that array, his order is from the foremost window to the one in the back and is a array of hwnd|
 |`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>`ExesToIgnore` parameter: You can leave it empty or you can pass an array to it of .exe´s, and it will ignore those, so even if they are in full screen it will return `False`<br/>For example. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```<br/>Use the funtion `CopyActiveExe()` in the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/blob/main/README.md#usefull-built-in-functions "Built in Functions") to get the exe easier<br><br/>For multimonitor support read the function in the source code|
 
@@ -98,7 +98,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`AltTabOnSwitch(bool)`|If `True` when you go to another desktop and everything is minimized it will automaticaly alt+tab(it does not send the keystrokes Alt+Tab because I tryed and looks bad and has bugs, the script imitates alt tab, does not use it)|
 |`CallFunctionOnDesktopSwitch(bool)`|If `True` calls a funcion named `OnDesktopSwitch()` each time the desktop changes, if `True` then YOU need to create that funcion`OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes<br/>If `False` stops calling that function|
 |`OpenDesktopManager()`|If you call it again it closes it|
-|`OpenAltTab()`|Same as Ctrl+Alt+Tab /todo: create function|
+|`OpenAltTab()`|Same as Ctrl+Alt+Tab|
 |`FocusLast()`|Like Alt+Tab, but does not press Alt+Tab, it´s an ahk imitation|
 |`ShowHideDesktop()`|Show/hide desktop, sends Win+D|
 
