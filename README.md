@@ -99,6 +99,12 @@ I put a bunch of hotkeys together so you can test it for yourself, with escape y
 
 GoToDesktopNumber(2) ; tip: if you call this at the beginning and if you start the scritp with windows, you will start always on the desktop you want
 
+; You can use this to have your favourite programs in the desktops you want:
+; try opening paint with this script running, it will open in desktop 3:
+AlwaysOpenOnDesktopNumber(3,"mspaint.exe")
+; try opening notepad with this script running, it will open in desktop 1:
+AlwaysOpenOnDesktopNumber(1,"Notepad.exe")
+
 q::GoToNextDesktop()
 w::GoToPrevDesktop()
 e::OpenDesktopManager() ; press again to close
@@ -123,12 +129,6 @@ OnDesktopSwitch(){
 }
 
 s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
-
-; You can use this to have your favourite programs in the desktops you want:
-; opens paint always on desktop 3 using his winClass:
-AlwaysOpenOnDesktopNumber(3,"MSPaintApp")
-; opens notepad always on desktop 1 using his winExe:
-AlwaysOpenOnDesktopNumber(1,,"Notepad.exe")
 
 ; to get the hwnd, class and exe easier:
 r::CopyActiveHwnd() ; thats it, just paste it wherever you want
