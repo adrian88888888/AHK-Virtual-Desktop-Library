@@ -48,16 +48,16 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 
 ## Move windows between desktops:
 
-Note: Sorry, all functions here have repetitive names, i already combined them for you and dealed with side effects of combineing them(for example flikering)
-so dont combine funtions if you need to, instead use the already combined in the library
-for example instead of this:
+Note: Functions here have repetitive names, but that because I already combined them for you and dealed with side effects of combining them(for example flickering)
+So don´t combine funtions if you need to, instead use the already combined function in the library
+For example instead of this:
 ```autohotkey
 q::
 MoveCurrentWindowToDesktop(2)
 GoToDesktop(2)
 return
 ```
-do this:
+Do this:
 ```autohotkey
 q::
 MoveCurrentWindowToDesktopAndGo(2)
@@ -94,6 +94,8 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 
 ## Set a background for each desktop:
+| Functions  |  Description |
+| :------------ | :------------ |
 |`SetBackgroundOnDesktop(desktop_number, imgPath)`|Sets the background of a specified desktop, put in `imgPath` the full directory of the image|
 |`SetDefaultBackground(imgPath)`|For example if you didn´t set up the background with `SetBackgroundOnDesktop(desktop_number, imgPath)` in desktop 4, the background will be the `imgPath` that you set here|
 
