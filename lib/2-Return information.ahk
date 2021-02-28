@@ -46,6 +46,12 @@ IsFullScreenMode(ExesToIgnore:=0){
 
 	; if no border and not minimized return true or false
 	Return ((style & 0x20800000) or winH < A_ScreenHeight or winW < A_ScreenWidth) ? false : true
+
+	; trying to make it understandable:
+	; if ((style & 0x20800000) or winH < A_ScreenHeight or winW < A_ScreenWidth)
+	; 	Return false
+	; else
+	; 	Return true
 }
 
 ConvertListToString(list){

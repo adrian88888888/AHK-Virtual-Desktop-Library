@@ -2,13 +2,18 @@ AltTabOnSwitch(bool){
 	if (bool = true)
 	{
 		DllCall(RegisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
-		OnMessage(0x1400 + 30, "AltTab")
+		OnMessage(0x1400 + 30, "AltTabOnDesktop")
 	}
 	if (bool = false)
 	{
 		DllCall(UnregisterPostMessageHookProc, Int, hwnd, Int, 0x1400 + 30)
-		OnMessage(0x1400 + 30, "AltTab")
+		OnMessage(0x1400 + 30, "AltTabOnDesktop")
 	}
+}
+
+AltTabOnDesktop(){
+	if OnDesktop()
+		FocusLastMinimized()
 }
 
 FocusLast(){
@@ -29,33 +34,6 @@ FocusSecondForemostWindow(){
 	lastWindow := altTabList[2]
 	WinActivate, ahk_id %lastWindow%
 }
-;en construccion-----------
-
-; global listOfBackgrounds := []
-;
-; BackgroundSetter(){
-; 	currentDesktop := GetCurrentDesktopNumber()
-; 	if (currentDesktop == 1)
-; 	{
-; 		ChangeBackground(1png)
-; 	}
-; 	if (currentDesktop == 2)
-; 	{
-; 		ChangeBackground(2png)
-; 	}
-; }
-;
-; SetBackgroundOnDesktop(num, imgPath){
-; 	listOfBackgrounds.push(num)
-; }
-;
-; SetBackgroundOnDesktop(1, imgPath)
-;
-; ChangeBackground(imgPath){
-; 	DllCall("SystemParametersInfo", UInt, 0x14, UInt, 0, Str, imgPath, UInt, 1)
-; }
-;--------------------------
-
 
 CallFunctionOnDesktopSwitch(bool){
 	if (bool = true)

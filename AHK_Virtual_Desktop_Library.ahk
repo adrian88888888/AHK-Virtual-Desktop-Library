@@ -8,8 +8,9 @@
 #Include lib\4-Open specified program on desired desktop every time.ahk
 #Include lib\5-Open-Close Desktop.ahk
 #Include lib\6-Pin-UnPin Windows.ahk
-#Include lib\7-Misc.ahk
-#Include lib\8-Built in Functions.ahk
+#Include lib\7-Set a background for each desktop.ahk
+#Include lib\8-Misc.ahk
+#Include lib\9-Built in Functions.ahk
 
 DetectHiddenWindows, On
 hwnd:=WinExist("ahk_pid " . DllCall("GetCurrentProcessId","Uint"))
@@ -33,8 +34,11 @@ global UnPinWindowProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor
 global IsPinnedAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "IsPinnedApp", "Ptr")
 global PinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "PinApp", "Ptr")
 global UnPinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "UnPinApp", "Ptr")
+global listOfBackgrounds := []
+global defaultImg :=
 
 RestartVirtualDesktopAccessorOnDemand()
+CallBackgroundSetterOnDesktopSwitch()
 
 RestartVirtualDesktopAccessorOnDemand(){ ; its needed when Explorer.exe crashes or restarts(e.g. when coming from fullscreen game)
 	explorerRestartMsg := DllCall("user32\RegisterWindowMessage", "Str", "TaskbarCreated")
