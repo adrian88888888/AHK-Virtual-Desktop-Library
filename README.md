@@ -4,9 +4,10 @@
 In Windows you can use virtual desktops, this library gives you functions to fully manipulate them<br/>
 For example:
 - `GoToDesktop(desktop_number)`
-- `GetCurrentDesktop()`(returns in wich desktop you are, for example: if you are in desktop 8 it will return 8)
+- `GetCurrentDesktop()`
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
+- `SetBackgroundOnDesktop(desktop_number, imgPath)`(Sets the background of a specified desktop)
 - `NewDesktop(desktop_number)`
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
@@ -101,6 +102,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`OpenAltTab()`|Same as Ctrl+Alt+Tab|
 |`FocusLast()`|Like Alt+Tab, but does not press Alt+Tab, it´s an ahk imitation|
 |`ShowHideDesktop()`|Show/hide desktop, sends Win+D|
+|`SetBackgroundOnDesktop(desktop_number, imgPath)`|Sets the background of a specified desktop, put in `imgPath` the full directory of the image|
 
 ## Usefull Built in Functions:
 Meant to make it easier<br/>
