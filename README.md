@@ -170,7 +170,7 @@ return
 Escape::ExitApp
 ```
 # Usefull ideas to use this library:
-- Go to the next/prev desktop when mouse touches the left/right side of the screen
+- Go to the next/prev desktop when the mouse touches the left/right side of the screen
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube ther's lots of demos of PowerToys)
 - When you go to another desktop and everything is minimized automaticaly focus the last minimized window with this function `AltTabOnSwitch(True)`[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#misc "Function in this table")
 - Have your favourite programs open always in the desktops you want(no matter how you open them) with the [Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#open-specified-program-on-desired-desktop-every-time "Function in this table")
