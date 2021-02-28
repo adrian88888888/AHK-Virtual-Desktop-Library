@@ -93,6 +93,10 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`UnPinApp(hwnd)`|UnPins the specified app|
 |`IsPinnedApp(hwnd)`|Returns 1 if pinned, 0 if not pinned, -1 if not valid|
 
+## Set a background for each desktop:
+|`SetBackgroundOnDesktop(desktop_number, imgPath)`|Sets the background of a specified desktop, put in `imgPath` the full directory of the image|
+|`SetDefaultBackground(imgPath)`|For example if you didn´t set up the background with `SetBackgroundOnDesktop(desktop_number, imgPath)` in desktop 4, the background will be the `imgPath` that you set here|
+
 ## Misc:
 | Functions  |  Description |
 | :------------ | :------------ |
@@ -102,7 +106,7 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 |`OpenAltTab()`|Same as Ctrl+Alt+Tab|
 |`FocusLast()`|Like Alt+Tab, but does not press Alt+Tab, it´s an ahk imitation|
 |`ShowHideDesktop()`|Show/hide desktop, sends Win+D|
-|`SetBackgroundOnDesktop(desktop_number, imgPath)`|Sets the background of a specified desktop, put in `imgPath` the full directory of the image|
+
 
 ## Usefull Built in Functions:
 Meant to make it easier<br/>
