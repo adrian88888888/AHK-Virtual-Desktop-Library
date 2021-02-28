@@ -199,7 +199,7 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 #Include, AHK_Virtual_Desktop_Library.ahk
 ```
 5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
-Win+r > sysdm.cpl > enter > advanced options > performance > configuration > UnTic the Animate windows when minimizing and maximizing > apply > ok
+Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
