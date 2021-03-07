@@ -48,6 +48,12 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 
 ## Move windows between desktops:
 
+| Functions  |  Description |
+| :------------ | :------------ |
+|`MoveCurrentWindowToDesktop(desktop_number)`|Moves current window to the desired desktop|
+|`MoveCurrentWindowToDesktopAndGo(desktop_number)`|Same as above but also goes to that desktop|
+|`MoveWindowToDesktop(desktop_number, hwndToMove)`|Meant to move a background window from the ACTUAL desktop to another<br/><br/>You can get a list of all background windows with `GetAltTabList()`|
+|`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
 Note: Functions here have repetitive names, but that because I already combined them for you and dealed with side effects of combining them(for example flickering)
 So don´t combine funtions if you need to, instead use the already combined function in the library
 For example instead of this:
@@ -63,12 +69,6 @@ q::
 MoveCurrentWindowToDesktopAndGo(2)
 return
 ```
-| Functions  |  Description |
-| :------------ | :------------ |
-|`MoveCurrentWindowToDesktop(desktop_number)`|Moves current window to the desired desktop|
-|`MoveCurrentWindowToDesktopAndGo(desktop_number)`|Same as above but also goes to that desktop|
-|`MoveWindowToDesktop(desktop_number, hwndToMove)`|Meant to move a background window from the ACTUAL desktop to another<br/><br/>You can get a list of all background windows with `GetAltTabList()`|
-|`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
 
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
