@@ -12,7 +12,7 @@ For example:
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
 - and more!
-- Also there´s a [list of usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "list of usefull ideas to use this library")
+- Also there's a [list of usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "list of usefull ideas to use this library")
 
 ## Index:
 - [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
@@ -179,7 +179,7 @@ Escape::ExitApp
 ```
 # Usefull ideas to use this library:
 - Go to the next/prev desktop when the mouse touches the left/right side of the screen
-- Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube ther's lots of demos of PowerToys)
+- Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them to the sides use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube there's lots of demos of PowerToys)
 - When you go to another desktop and everything is minimized automaticaly focus the last minimized window with this function `AltTabOnSwitch(True)`[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#misc "Function in this table")
 - Have your favourite programs open always in the desktops you want(no matter how you open them) with the [Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#open-specified-program-on-desired-desktop-every-time "Function in this table")
 - Pressing a key and draging the mouse to one corner will `OpenDesktopManager()`[Function in this table](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#misc "Function in this table")
