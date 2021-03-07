@@ -15,9 +15,9 @@ For example:
 - Also there's a [list of usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "list of usefull ideas to use this library")
 
 ## Index:
-- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
-- [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#working-ahk-example "Working ahk example")
 - [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#documentation "Documentation")
+- [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#working-ahk-example "Working ahk example")
+- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
 - [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#credits "Credits")
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#installation "Installation")
 
