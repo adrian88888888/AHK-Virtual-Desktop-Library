@@ -7,7 +7,7 @@ For example:
 - `GetCurrentDesktop()`
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
-- `SetBackgroundOnDesktop(desktop_number, imgPath)`(Sets the background of a specified desktop)
+- `SetBackgroundOnDesktop(desktop_number, imgPath)`(Sets the background on a particular desktop)
 - `NewDesktop(desktop_number)`
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
