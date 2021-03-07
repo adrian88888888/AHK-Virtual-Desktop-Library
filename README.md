@@ -198,17 +198,18 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 ```
 Your script folder
 └── lib
-│    ├──AHK-Virtual-Desktop-Library
-│    ├──Other Library if you have
-│    ├──Other Library if you have
-└──Your Script Here.ahk ====>here you do the #include
+│    ├── AHK-Virtual-Desktop-Library
+│    ├── Other Library if you have
+│    ├── Other Library if you have
+└── Your Script Here.ahk
 ```
 
-7. Then include it in your script:
+5. Then include the library in your script like this:
 ```autohotkey
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
-5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
+Note: If you want to modify the structure in the Main.ahk put the dir of the VirtualDesktopAccessor.dll right again
+6. I really recomend deactivating the animation of changing desktops, they are enemies of instant responsiveness, try it for a while, to do so:<br/>
 Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok
 
 # Credits:
