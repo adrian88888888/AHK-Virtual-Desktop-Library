@@ -1,23 +1,8 @@
-﻿; 3rd paty
-#Include lib\3rd party\WinHook.ahk
-#Include lib\3rd party\SetClipboardHTML.ahk
-; -------------
-#Include lib\1-Navigate between desktops.ahk
-#Include lib\2-Return information.ahk
-#Include lib\3-Move windows between desktops.ahk
-#Include lib\4-Open specified program on desired desktop every time.ahk
-#Include lib\5-Open-Close Desktop.ahk
-#Include lib\6-Pin-UnPin Windows.ahk
-#Include lib\7-Set a background for each desktop.ahk
-#Include lib\8-Misc.ahk
-#Include lib\9-Built in Functions.ahk
-
 DetectHiddenWindows, On
 hwnd:=WinExist("ahk_pid " . DllCall("GetCurrentProcessId","Uint"))
 hwnd+=0x1000<<32
 
-
-hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "lib\3rd party\VirtualDesktopAccessor.dll", "Ptr")
+hVirtualDesktopAccessor := DllCall("LoadLibrary", Str, "lib\AHK-Virtual-Desktop-Library\3rd party\VirtualDesktopAccessor.dll", "Ptr")
 global GoToDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GoToDesktopNumber", "Ptr")
 global GetCurrentDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GetCurrentDesktopNumber", "Ptr")
 global GetDesktopCountProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "GetDesktopCount", "Ptr")
@@ -34,11 +19,33 @@ global UnPinWindowProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor
 global IsPinnedAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "IsPinnedApp", "Ptr")
 global PinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "PinApp", "Ptr")
 global UnPinAppProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "UnPinApp", "Ptr")
+
+
+
+; variables related with SetBackgroundOnDesktop(), SetDefaultBackground():
 global listOfBackgrounds := []
-global defaultImg :=
+global defaultBackground :=
+global aBackgroundWasSetInADesktop :=
+
+; 3rd paty
+#Include lib\AHK-Virtual-Desktop-Library\3rd party\SetClipboardHTML.ahk
+#Include lib\AHK-Virtual-Desktop-Library\3rd party\WinHook.ahk
+; -------------
+
+#Include lib\AHK-Virtual-Desktop-Library\1-Navigate between desktops.ahk
+#Include lib\AHK-Virtual-Desktop-Library\2-Return information.ahk
+#Include lib\AHK-Virtual-Desktop-Library\3-Move windows between desktops.ahk
+#Include lib\AHK-Virtual-Desktop-Library\4-Open specified program on desired desktop every time.ahk
+#Include lib\AHK-Virtual-Desktop-Library\5-Open-Close Desktop.ahk
+#Include lib\AHK-Virtual-Desktop-Library\6-Pin-UnPin Windows.ahk
+#Include lib\AHK-Virtual-Desktop-Library\7-Set a background for each desktop.ahk
+#Include lib\AHK-Virtual-Desktop-Library\8-Misc.ahk
+#Include lib\AHK-Virtual-Desktop-Library\9-Built in Functions.ahk
+
+
 
 RestartVirtualDesktopAccessorOnDemand()
-CallBackgroundSetterOnDesktopSwitch()
+ChangeBackgroundOnDesktopSwitch()
 
 RestartVirtualDesktopAccessorOnDemand(){ ; its needed when Explorer.exe crashes or restarts(e.g. when coming from fullscreen game)
 	explorerRestartMsg := DllCall("user32\RegisterWindowMessage", "Str", "TaskbarCreated")
