@@ -124,7 +124,7 @@ Meant to make it easier<br/>
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
 ```autohotkey
-#Include, AHK_Virtual_Desktop_Library.ahk
+#Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 
 GoToDesktop(2) ; tip: if you call this at the beginning of your script and if you start it with windows, you will start windows always on the desktop you want
 
@@ -196,7 +196,7 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 4. You should end up with your script, the AHK_Vitrual_Desktop_Library.ahk and the lib folder, all in the same folder
 6. Then include it in your script:
 ```autohotkey
-#Include, AHK_Virtual_Desktop_Library.ahk
+#Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
 5. I really recomend deactivating the animation of changing desktops, try it for a while, to do so search it on google or:<br/>
 Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok
