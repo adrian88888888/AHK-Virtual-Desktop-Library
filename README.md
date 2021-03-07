@@ -189,12 +189,28 @@ If you have any usefull way you use this library and is not in this list, please
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
 
 # Installation:
-Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663<br/>
+Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663, also it was done with ahk v1 not v2<br/>
 1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
-2. Download the file AHK_Vitrual_Desktop_Library.ahk and the folder lib
-3. Put them in the same folder as your script
-4. You should end up with your script, the AHK_Vitrual_Desktop_Library.ahk and the lib folder, all in the same folder
-6. Then include it in your script:
+2. Download the folder lib
+3. Put it in the same folder as your script
+4. You should end up with:
+
+Your script folder
+	│
+	┗─lib
+	│  │
+	│  ┗─AHK-Virtual-Desktop-Library
+	│  │
+	│  ┗─Other Library if you have
+	│  │
+	│  ┗─Other Library if you have
+	│  │
+	│  ┗─Other Library if you have
+	│
+	┗─Your Script Here.ahk ====>here you do the ```#include```
+
+
+7. Then include it in your script:
 ```autohotkey
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
