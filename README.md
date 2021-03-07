@@ -56,7 +56,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
 
 Note: Functions here have repetitive names, but that's because I already combined them for you and dealed with side effects of it(for example flickering)<br/>
-So don´t combine funtions, use the already combined ones in the table IF possible<br/>
+So don´t combine funtions, use the already combined ones from the table IF possible<br/>
 For example instead of this:
 ```autohotkey
 q::
