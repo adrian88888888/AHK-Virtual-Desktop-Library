@@ -195,20 +195,14 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 3. Put it in the same folder as your script
 4. You should end up with:
 
+```
 Your script folder
-	│
-	┗─lib
-	│  │
-	│  ┗─AHK-Virtual-Desktop-Library
-	│  │
-	│  ┗─Other Library if you have
-	│  │
-	│  ┗─Other Library if you have
-	│  │
-	│  ┗─Other Library if you have
-	│
-	┗─Your Script Here.ahk ====>here you do the ```#include```
-
+└── lib
+│    ├──AHK-Virtual-Desktop-Library
+│    ├──Other Library if you have
+│    ├──Other Library if you have
+└──Your Script Here.ahk ====>here you do the #include
+```
 
 7. Then include it in your script:
 ```autohotkey
