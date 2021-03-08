@@ -7,7 +7,7 @@ For example:
 - `GetCurrentDesktop()`
 - `GetAmountOfDesktops()`
 - `MoveCurrentWindowToDesktop(desktop_number)`
-- `SetBackgroundOnDesktop(desktop_number, imgPath)`(Sets the background on a particular desktop)
+- `SetBackgroundOnDesktop(desktop_number, imgPath)`(You can have one background per desktop)
 - `NewDesktop()`
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
@@ -99,6 +99,8 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 | :------------ | :------------ |
 |`SetBackgroundOnDesktop(desktop_number, path)`|Sets the background of a particular desktop<br/>Parameter `path`: You can put in it one of 2 things:<br/>1. The path to an image<br/>2. The path to a folder with only images on it, and it will take a random one from it, for example `SetBackgroundOnDesktop(1,"C:\Personalizing Windows\Wallpapers\For desktop 1\")`, don´t forget to put an "\" at the end<br/><br/>Note: you can give to it a folder path and have only one image in it, that way when you decide to change the wallpaper you have to interact with the folder and not with the code|
 |`SetDefaultBackground(path)`|For example if you didn't set up the background with `SetBackgroundOnDesktop(desktop_number, path)` in desktop 4, the background will be the default one that you set here, the parameter `path` works exactly the same as the function above|
+
+Note: The wallpaper does not changes instantly(takes 200 ms?), windows was not made with this feature in mind so this is my best try
 
 ## Misc:
 | Functions  |  Description |
