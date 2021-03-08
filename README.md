@@ -26,17 +26,9 @@ For example:
    - [Set a background for each desktop](#Set-a-background-for-each-desktop)
    - [Misc](#Misc)
    - [Usefull Built in Functions](#Usefull-Built-in-Functions)    
-
 - [Working AHK Example](#Working-AHK-Example)
 - [Usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 - [Credits](#Credits)
-
-
-- [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#installation "Installation")
-- [Documentation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#documentation "Documentation")
-- [Working AHK Example](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#working-ahk-example "Working ahk example")
-- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
-- [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#credits "Credits")
 
 ------------------
 
