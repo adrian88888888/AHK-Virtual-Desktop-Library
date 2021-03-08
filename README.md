@@ -56,7 +56,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`MoveWindowToDesktopAndGo(desktop_number, hwndToMove)`|Same as above but moves to that desktop and it will focus that window|
 
 Note: Functions here have repetitive names, but that's because I already combined them for you and dealed with side effects of it(for example flickering)<br/>
-So don´t combine funtions, use the already combined ones from the table IF possible<br/>
+So don't combine funtions, use the already combined ones from the table IF possible<br/>
 For example instead of this:
 ```autohotkey
 q::
@@ -150,8 +150,8 @@ GoToDesktop(2) ; tip: if you call this at the beginning of your script and if yo
 ; You can use this to have your favourite programs in the desktops you want:
 ; try opening paint with this script running, it will open in desktop 3:
 AlwaysOpenOnDesktopNumber(3,"mspaint.exe")
-; try opening notepad with this script running, it will open in desktop 1:
-AlwaysOpenOnDesktopNumber(1,"Notepad.exe")
+; try opening notepad with this script running, it will open in desktop 1 and also go to it:
+AlwaysOpenOnDesktopNumberAndGo(1,"Notepad.exe")
 
 q::GoToPrevDesktop()
 w::GoToNextDesktop()
