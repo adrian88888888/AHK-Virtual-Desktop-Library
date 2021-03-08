@@ -215,10 +215,11 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 
 ```
 Your script folder
-└── lib
+├── lib
 │    ├── AHK-Virtual-Desktop-Library
 │    ├── Other Library if you have
 │    ├── Other Library if you have
+│    └──...
 └── Your Script Here.ahk
 ```
 
