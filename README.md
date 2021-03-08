@@ -15,12 +15,21 @@ For example:
 - Also there's a [list of usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "list of usefull ideas to use this library")
 
 ## Index:
-- [Installation](#installation)
+- [Installation](#Installation)
     - [Documentation](#Documentation)
-    - [Prerequisites](#prerequisites)
-- [Working AHK Example](#procedure)
-- [Usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "Usefull ideas to use this library")
-- [Credits](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#credits "Credits")
+    - [Navigate between desktops](#Navigate between desktops)
+    - [Return information](#Return information)
+    - [Move windows between desktops](#Move windows between desktops)
+    - [Open specified program on desired desktop every time](#Open specified program on desired desktop every time)
+    - [Open/Close Desktop](#Open/Close Desktop)
+    - [Pin/UnPin Windows](#Pin/UnPin Windows)
+    - [Set a background for each desktop](#Set a background for each desktop)
+    - [Misc](#Misc)
+    - [Usefull Built in Functions](#Usefull Built in Functions)
+
+- [Working AHK Example](#Working AHK Example)
+- [Usefull ideas to use this library](#Usefull ideas to use this library)
+- [Credits](#Credits)
 
 
 - [Installation](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#installation "Installation")
