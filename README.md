@@ -12,7 +12,7 @@ For example:
 - you can open a program always on a specifed desktop with `AlwaysOpenOnDesktopNumber(in_wich_desktop, the_program_you_want)`
 - `GetAltTabList()`
 - and more!
-- Also there's a [list of usefull ideas to use this library](https://github.com/adrian88888888/AHK_Virtual_Desktop_Library/#usefull-ideas-to-use-this-library "list of usefull ideas to use this library")
+- Also there's a [list of usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 
 ## Index:
 - [Installation](#Installation)
@@ -34,7 +34,7 @@ For example:
 
 # Documentation:
 
-Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#usefull-built-in-functions "Built in Functions") `GetActiveHwnd()` to get the active hwnd<br/>
+Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](#usefull-built-in-functions) `GetActiveHwnd()` to get the active hwnd<br/>
 To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 
 ## Navigate between desktops:
@@ -53,7 +53,7 @@ To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
 |`IsWindowOnCurrentDesktop(hwnd)` |  Returns if the given hwnd is in the current desktop|
 |`IsWindowOnDesktopNumber(desktop_number, hwnd)`| Return if a hwnd is in a specified desktop|
 |`GetAltTabList()`|Alt+Tab shows an array/list of open windows, this funtion returns that array, his order is from the foremost window to the one in the back, and is a array of hwnd's|
-|`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>`ExesToIgnore` parameter: You can leave it empty or you can pass an array to it of .exe´s, and it will ignore those, so even if they are in full screen it will return `False`<br/>For example. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```<br/>Use the funtion `CopyActiveExe()` in the [Built in Functions](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#usefull-built-in-functions "Built in Functions") to get the exe easier<br><br/>For multimonitor support read the function in the source code|
+|`IsFullScreenMode(ExesToIgnore)`|Returns `True` if you are in full screen mode<br/>Returns `False` if you are in window mode<br/>`ExesToIgnore` parameter: You can leave it empty or you can pass an array to it of .exe´s, and it will ignore those, so even if they are in full screen it will return `False`<br/>For example. ```ExesToIgnore := ["atom.exe","GitHubDesktop.exe","chrome.exe"]```<br/>Use the funtion `CopyActiveExe()` in the [Built in Functions](#usefull-built-in-functions) to get the exe easier<br><br/>For multimonitor support read the function in the source code|
 
 ## Move windows between desktops:
 
@@ -83,7 +83,7 @@ return
 ## Open specified program on desired desktop every time:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`AlwaysOpenOnDesktopNumber(desktop_number, exe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Requires 2 parameters:<br/>`desktop_number`:In wich desktop the program will open<br/>`exe`: a string with the .exe.<br/>For example. `AlwaysOpenOnDesktopNumber(3, "Notepad.exe")` <br/><br/>In this part you can use the [Built in Function](https://github.com/adrian88888888/AHK_Vitrual_Desktop_Library/#usefull-built-in-functions "Built in Function") `CopyActiveExe()` to make it easier.<br/><br/>If all windows start to open in that desktop, that means that the parameters are wrong|
+|`AlwaysOpenOnDesktopNumber(desktop_number, exe)`|You can use this to have your favourite programs in the desktops you want.<br/>Every time you open the a specified program(does not matter how) it will open in the desired desktop.<br/>Requires 2 parameters:<br/>`desktop_number`:In wich desktop the program will open<br/>`exe`: a string with the .exe.<br/>For example. `AlwaysOpenOnDesktopNumber(3, "Notepad.exe")` <br/><br/>In this part you can use the [Built in Function](#usefull-built-in-functions) `CopyActiveExe()` to make it easier.<br/><br/>If all windows start to open in that desktop, that means that the parameters are wrong|
 |`AlwaysOpenOnDesktopNumberAndGo(desktop_number, exe)`|Same as above, but also goes to that desktop|
 
 ## Open-Close Desktop:
