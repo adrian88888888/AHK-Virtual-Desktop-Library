@@ -115,17 +115,27 @@ Note: The wallpaper does not changes instantly(takes 200 ms?), windows was not m
 
 ## Usefull Built in Functions:
 Meant to make it easier<br/>
+### Hwnd
 | Functions  |  Description |
 | :------------ | :------------ |
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`CopyActiveHwnd()`|Copies into the clipboard the hwnd of the active window|
 |`IsHwndActive(hwnd)`|Returns `True` if is active and `False` if not, you have to give it a `hwnd` as a parameter|
+### Exe
+| Functions  |  Description |
+| :------------ | :------------ |
 |`GetActiveExe()`|Returns the exe of the active window|
 |`CopyActiveExe()`|Copies into the clipboard the exe of the active window|
 |`IsExeActive(exe)`|Returns `True` if is active and `False` if not, you have to give it an `exe` as a parameter|
+### Class
+| Functions  |  Description |
+| :------------ | :------------ |
 |`GetActiveClass()`|Returns the class of the active window|
 |`CopyActiveClass()`|Copies into the clipboard the class of the active window|
 |`IsClassActive(class)`|Returns `True` if is active and `False` if not, you have to give it a `class` as a parameter|
+### Title
+| Functions  |  Description |
+| :------------ | :------------ |
 |`GetActiveTitle()`|Returns the title of the active window|
 |`CopyActiveTitle()`|Copies into the clipboard the title of the active window|
 |`IsTitleActive(title)`|Returns `True` if is active and `False` if not, you have to give it a `title` as a parameter|
