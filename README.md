@@ -167,6 +167,7 @@ MsgBox, You are on desktop number %currentDesktop%
 return
 
 x::MoveCurrentWindowToDesktop(3)
+; x::MoveCurrentWindowToDesktopAndGo(3)
 
 a::CallFunctionOnDesktopSwitch(true) ; If true calls a funcion named OnDesktopSwitch(), is not obligatory to use
 
@@ -247,5 +248,7 @@ Also thanks to tom-bowles for a "bug fix" [here](https://github.com/Ciantic/Virt
 Thanks to Icarus for half of the `IsFullScreenMode()` function [here](https://autohotkey.com/board/topic/38882-detect-fullscreen-application/ "here")
 
 `GetAltTabList()` took from [here](https://www.autohotkey.com/boards/viewtopic.php?t=46069 "here")
+
+Thanks to itzjakm for his idea of being able to pick a random image from a folder to set it as a wallpaper
 
 And thanks to the ahk community
