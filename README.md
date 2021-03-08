@@ -153,8 +153,8 @@ AlwaysOpenOnDesktopNumber(3,"mspaint.exe")
 ; try opening notepad with this script running, it will open in desktop 1:
 AlwaysOpenOnDesktopNumber(1,"Notepad.exe")
 
-q::GoToNextDesktop()
-w::GoToPrevDesktop()
+q::GoToPrevDesktop()
+w::GoToNextDesktop()
 e::OpenDesktopManager() ; press again to close
 
 1::GoToDesktop(1)
@@ -172,8 +172,6 @@ a::CallFunctionOnDesktopSwitch(true) ; If true calls a funcion named OnDesktopSw
 
 OnDesktopSwitch(){
 	MsgBox, I run every time the desktop changes, I stop with the key "s"
-	; one of the things you can put here is FocusLastIfOnDesktop(): if you go to another desktop 
-	; and everything is minimized it will press alt tab
 }
 
 s::CallFunctionOnDesktopSwitch(false) ; stops calling OnDesktopSwitch()
