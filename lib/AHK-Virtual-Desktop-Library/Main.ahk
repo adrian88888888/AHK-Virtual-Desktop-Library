@@ -32,15 +32,15 @@ global aBackgroundWasSetInADesktop :=
 #Include lib\AHK-Virtual-Desktop-Library\3rd party\WinHook.ahk
 ; -------------
 
-#Include lib\AHK-Virtual-Desktop-Library\1-Navigate between desktops.ahk
-#Include lib\AHK-Virtual-Desktop-Library\2-Return information.ahk
-#Include lib\AHK-Virtual-Desktop-Library\3-Move windows between desktops.ahk
-#Include lib\AHK-Virtual-Desktop-Library\4-Open specified program on desired desktop every time.ahk
-#Include lib\AHK-Virtual-Desktop-Library\5-Open-Close Desktop.ahk
-#Include lib\AHK-Virtual-Desktop-Library\6-Pin-UnPin Windows.ahk
-#Include lib\AHK-Virtual-Desktop-Library\7-Set a background for each desktop.ahk
-#Include lib\AHK-Virtual-Desktop-Library\8-Misc.ahk
-#Include lib\AHK-Virtual-Desktop-Library\9-Built in Functions.ahk
+#Include lib\AHK-Virtual-Desktop-Library\01-Navigate between desktops.ahk
+#Include lib\AHK-Virtual-Desktop-Library\02-Return information.ahk
+#Include lib\AHK-Virtual-Desktop-Library\03-Move windows between desktops.ahk
+#Include lib\AHK-Virtual-Desktop-Library\04-Open specified program on desired desktop every time.ahk
+#Include lib\AHK-Virtual-Desktop-Library\05-Open-Close Desktop.ahk
+#Include lib\AHK-Virtual-Desktop-Library\06-Pin-UnPin Windows.ahk
+#Include lib\AHK-Virtual-Desktop-Library\07-Set a background for each desktop.ahk
+#Include lib\AHK-Virtual-Desktop-Library\08-Misc.ahk
+#Include lib\AHK-Virtual-Desktop-Library\09-Built in Functions.ahk
 #Include lib\AHK-Virtual-Desktop-Library\10-Not Documented-For internal aim.ahk
 
 
