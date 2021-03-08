@@ -229,8 +229,8 @@ Your script folder
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
 Note: If you want to modify the structure in the Main.ahk put the dir of the VirtualDesktopAccessor.dll right again<br/><br/>
-6. I really recomend deactivating the animation of changing desktops, they are enemies of instant responsiveness, try it for a while, to do so:<br/>
-Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok
+6. I really recomend deactivating the animation of changing desktops, they are "enemies" of instant responsiveness, try it for a while, to do so:<br/>
+```Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok```
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
