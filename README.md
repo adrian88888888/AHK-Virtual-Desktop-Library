@@ -97,8 +97,8 @@ When you pin a Window or an App, it means that it will stay in all desktops, Win
 ## Set a background for each desktop:
 | Functions  |  Description |
 | :------------ | :------------ |
-|`SetBackgroundOnDesktop(desktop_number, path)`|Sets the background of a specified desktop<br/>`path`: You can put in it one of 2 things:<br/>1. The path to an image<br/>2. The path to a folder with only images on it, and it will take a random one from it, for example `SetBackgroundOnDesktop(1, C:\Personalizing Windows\Wallpapers\For desktop 1\)`|
-|`SetDefaultBackground(path)`|For example if you didn't set up the background with `SetBackgroundOnDesktop(desktop_number, path)` in desktop 4, the background will be the default one that you set here, the parameter `path` works exactly the same|
+|`SetBackgroundOnDesktop(desktop_number, path)`|Sets the background of a specified desktop<br/>Parameter `path`: You can put in it one of 2 things:<br/>1. The path to an image<br/>2. The path to a folder with only images on it, and it will take a random one from it, for example `SetBackgroundOnDesktop(1, C:\Personalizing Windows\Wallpapers\For desktop 1\)`|
+|`SetDefaultBackground(path)`|For example if you didn't set up the background with `SetBackgroundOnDesktop(desktop_number, path)` in desktop 4, the background will be the default one that you set here, the parameter `path` works exactly the same as the function above|
 
 ## Misc:
 | Functions  |  Description |
