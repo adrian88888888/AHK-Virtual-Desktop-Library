@@ -1,6 +1,11 @@
 ; note: the variable "path" is called "thePath" because path looks like a built
 ; in variable, even if is not in the documentation of the built in varialbes
 
+; also theres a bug here, i put 5 hours to find it and i just can't
+; and i want my 5 hours back :(
+; the bug: you cant execute SetDefaultBackground() twice in the same code
+; script, otherwise it will break the default one
+
 SetDefaultBackground(thePath){
 	StoreDefaultBackgroundInVariable(thePath)
 	ChangeBackground()
