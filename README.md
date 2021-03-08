@@ -16,7 +16,7 @@ For example:
 
 ## Index:
 - [Installation](#Installation)
-    - [Documentation](#Documentation)
+  - [Documentation](#Documentation)
     - [Navigate between desktops](#Navigate-between-desktops)
     - [Return information](#Return-information)
     - [Move windows between desktops](#Move-windows-between-desktops)
