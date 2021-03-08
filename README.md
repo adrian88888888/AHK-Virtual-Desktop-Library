@@ -120,10 +120,15 @@ Meant to make it easier<br/>
 |`GetActiveHwnd()`|Returns the hwnd of the active window|
 |`CopyActiveHwnd()`|Copies into the clipboard the hwnd of the active window|
 |`IsHwndActive(hwnd)`|Returns `True` if is active and `False` if not, you have to give it a `hwnd` as a parameter|
-
 |`GetActiveExe()`|Returns the exe of the active window|
 |`CopyActiveExe()`|Copies into the clipboard the exe of the active window|
 |`IsExeActive(exe)`|Returns `True` if is active and `False` if not, you have to give it an `exe` as a parameter|
+|`GetActiveClass()`|Returns the class of the active window|
+|`CopyActiveClass()`|Copies into the clipboard the class of the active window|
+|`IsClassActive(class)`|Returns `True` if is active and `False` if not, you have to give it a `class` as a parameter|
+|`GetActiveTitle()`|Returns the title of the active window|
+|`CopyActiveTitle()`|Copies into the clipboard the title of the active window|
+|`IsTitleActive(title)`|Returns `True` if is active and `False` if not, you have to give it a `title` as a parameter|
 
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
