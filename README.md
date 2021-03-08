@@ -209,7 +209,7 @@ Escape::ExitApp
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them to the sides use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube there's demos of PowerToys)
 - When you go to another desktop and everything is minimized automaticaly focus the last minimized window with this function `AltTabOnSwitch(True)`[Function in this table](#Misc)
 - Have your favourite programs open always in the desktops you want(no matter how you open them) with the [Function in this table](#open-specified-program-on-desired-desktop-every-time)
-- Pressing a key and moving the mouse to one corner will `OpenDesktopManager()`[Function in this table](#misc")
+- Pressing a key and moving the mouse to one corner will `OpenDesktopManager()`[Function in this table](#misc)
 - XButton2(also called 5th mouse button or button foward in the mouse) to `FocusLast()`([Function in this table](#misc)) without sending the keystroke alt+tab
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
