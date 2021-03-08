@@ -224,11 +224,12 @@ Your script folder
 ```
 
 5. Then include the library in your script like this:
+
 ```autohotkey
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
 Note: If you want to modify the structure in the Main.ahk put the dir of the VirtualDesktopAccessor.dll right again<br/><br/>
- 6. I really recomend deactivating the animation of changing desktops, they are enemies of instant responsiveness, try it for a while, to do so:<br/>
+6. I really recomend deactivating the animation of changing desktops, they are enemies of instant responsiveness, try it for a while, to do so:<br/>
 Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok
 
 # Credits:
@@ -238,7 +239,7 @@ Ciantic: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
 Thanks to lschwahn because he did a complex program and I took ideas from his code<br/>
 lschwahn: https://github.com/lschwahn/win-10-virtual-desktop-enhancer<br/>
 
-As a newbie I couldn't find something easy to use, something ready to go, something with documentation, so here it is, I also added 19 of my own functions
+As a newbie I couldn't find something easy to use, something ready to go, something with documentation, so here it is, I also added more than 20 of my own functions
 
 Credits to Fanatic Guru for the [[Class] WinHook](https://www.autohotkey.com/boards/viewtopic.php?t=59149 "[Class] WinHook")
 
