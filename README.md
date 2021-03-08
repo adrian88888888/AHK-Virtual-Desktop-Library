@@ -138,7 +138,7 @@ Meant to make it easier<br/>
 | :------------ | :------------ |
 |`GetActiveTitle()`|Returns the title of the active window|
 |`CopyActiveTitle()`|Copies into the clipboard the title of the active window|
-|`IsTitleActive(title)`|Returns `True` if is active and `False` if not, you have to give it a `title` as a parameter|
+|`IsTitleActive(title)`|Returns `True` if is active and `False` if not, you have to give it a `windowTitle` as a parameter|
 
 # Working AHK Example:
 I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
