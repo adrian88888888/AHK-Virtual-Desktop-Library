@@ -17,7 +17,7 @@ For example:
 ## Index:
 - [Installation](#Installation)
     - [Documentation](#Documentation)
-    - [Navigate between desktops](#Navigate between desktops)
+    - [Navigate between desktops](#Navigate-between-desktops)
     - [Return information](#Return information)
     - [Move windows between desktops](#Move windows between desktops)
     - [Open specified program on desired desktop every time](#Open specified program on desired desktop every time)
