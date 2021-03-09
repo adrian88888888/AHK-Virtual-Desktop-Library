@@ -205,7 +205,7 @@ return
 Escape::ExitApp
 ```
 # Usefull ideas to use this library:
-- Go to the next/prev desktop when the mouse touches the left/right side of the screen
+- Go to the next/prev desktop when the mouse touches the left/right side of the screen(if you want this to not work inside games use the function `IsFullScreenMode()`)
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them to the sides use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube there's demos of PowerToys)
 - When you go to another desktop and everything is minimized automaticaly focus the last minimized window with this function `AltTabOnSwitch(True)`[Function in this table](#Misc)
 - Have your favourite programs open always in the desktops you want(no matter how you open them) with the [Function in this table](#open-specified-program-on-desired-desktop-every-time)
@@ -214,6 +214,7 @@ Escape::ExitApp
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
+PLEASE: if you do the code of any of this ideas, show me your repo so I can link it here or so we/I can use it, thanks!
 
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663, it was done with ahk v1<br/>
