@@ -115,8 +115,8 @@ Note: The wallpaper does not changes instantly(takes 200 ms?), windows was not m
 | Functions  |  Description |
 | :------------ | :------------ |
 |`AltTabOnSwitch()`|Call this function and when you go to another desktop and everything is minimized it will automaticaly alt+tab(it does not send the keystrokes Alt+Tab because I tryed and looks bad and has bugs, the script imitates alt tab, does not use it)|
-|`CallFunctionOnDesktopSwitch()`|When you call it it will call a funcion named `OnDesktopSwitch()` each time the desktop changes, YOU need to create that funcion `OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes|
-|`OpenDesktopManager()`|Opens desktop manager, if you call it again it closes it|
+|`CallFunctionOnDesktopSwitch()`|When you call it, it will call a funcion named `OnDesktopSwitch()` each time the desktop changes, YOU need to create that funcion `OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes|
+|`DesktopManager()`|Opens desktop manager, call it again to close it|
 |`OpenAltTab()`|Same as Ctrl+Alt+Tab|
 |`FocusLastWindow()`|Like Alt+Tab, but does not press Alt+Tab, it's an ahk imitation|
 |`ShowHideDesktop()`|Show/hide desktop, Sends Win+D|
@@ -164,7 +164,7 @@ AlwaysOpenOnDesktopNumberAndGo(1,"Notepad.exe")
 
 q::GoToPrevDesktop()
 w::GoToNextDesktop()
-e::OpenDesktopManager() ; press again to close
+e::DesktopManager() ; press again to close
 
 1::GoToDesktop(1)
 2::GoToDesktop(2)
@@ -209,8 +209,8 @@ Escape::ExitApp
 - Move a window to the next/prev desktop when dragged to the left/right side of the screen, and to snap them to the sides use [Microsoft PowerToys](https://github.com/microsoft/PowerToys "PowerToys")(in Youtube there's demos of PowerToys)
 - When you go to another desktop and everything is minimized automaticaly focus the last minimized window with this function `AltTabOnSwitch(True)`[Function in this table](#Misc)
 - Have your favourite programs open always in the desktops you want(no matter how you open them) with the [Function in this table](#open-specified-program-on-desired-desktop-every-time)
-- Pressing a key and moving the mouse to one corner will `OpenDesktopManager()`[Function in this table](#misc)
-- XButton2(also called 5th mouse button or button foward in the mouse) to `FocusLast()`([Function in this table](#misc)) without sending the keystroke alt+tab
+- Pressing a key and moving the mouse to one corner will `DesktopManager()`[Function in this table](#misc)
+- XButton2(also called 5th mouse button or button foward in the mouse) to `FocusLastWindow()`([Function in this table](#misc)) without sending the keystroke alt+tab
 
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
