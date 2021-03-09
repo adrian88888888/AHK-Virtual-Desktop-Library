@@ -14,7 +14,7 @@ MoveCurrentWindowToDesktop(num){ ; happy bug: when everything is minimized exept
 	if not OnDesktop() and not OnTaskBar() and not OnDesktopToGo(num)
 	{
 		hwndToMove := GetActiveHwnd()
-		FocusLast()
+		FocusLastWindow()
 		DllCall(MoveWindowToDesktopNumberProc, UInt, hwndToMove, UInt, num - 1)
 	}
 }
@@ -33,7 +33,7 @@ MoveWindowToDesktop(num, hwndToMove){
 	{
 		if IsHwndActive(hwndToMove)
 		{
-			FocusLast()
+			FocusLastWindow()
 		}
 		DllCall(MoveWindowToDesktopNumberProc, UInt, hwndToMove, UInt, num - 1)
 	}
