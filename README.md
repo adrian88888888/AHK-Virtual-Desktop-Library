@@ -117,7 +117,7 @@ Note: The wallpaper does not changes instantly(takes 200 ms?), windows was not m
 |`AltTabOnSwitch()`|Call this function and when you go to another desktop and everything is minimized it will automaticaly alt+tab(it does not send the keystrokes Alt+Tab because I tryed and looks bad and has bugs, the script imitates alt tab, does not use it)|
 |`CallFunctionOnDesktopSwitch()`|When you call it, it will call a funcion named `OnDesktopSwitch()` each time the desktop changes, YOU need to create that funcion `OnDesktopSwitch()` and add to it what you want to happen every time the desktop changes|
 |`DesktopManager()`|Opens desktop manager, call it again to close it|
-|`OpenAltTab()`|Same as Ctrl+Alt+Tab|
+|`HoldAltTab()`|Same as Ctrl+Alt+Tab|
 |`FocusLastWindow()`|Like Alt+Tab, but does not press Alt+Tab, it's an ahk imitation|
 |`ShowHideDesktop()`|Show/hide desktop, Sends Win+D|
 
