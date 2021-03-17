@@ -1,4 +1,4 @@
-# AHK_Virtual_Desktop_Library
+# AHK-Virtual Desktop Library
 
 # Introduction:
 In Windows you can use virtual desktops, this library gives you functions to fully manipulate them<br/>
