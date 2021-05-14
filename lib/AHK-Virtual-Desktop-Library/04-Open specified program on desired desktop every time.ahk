@@ -2,7 +2,7 @@
 
 AlwaysOpenOnDesktopNumber(num, exe:=""){
 	if (exe = "Explorer.EXE")
-    WinHook.Shell.Add(Func("MoveAndFocus").Bind(num),,CabinetWClass,,1)
+    WinHook.Shell.Add(Func("MoveAndFocus").Bind(num),,"CabinetWClass",,1)
 	else
 	{
 		DetectHiddenWindows On ; FuncOrMethod will be called with DetectHiddenWindows On.....tbh i got no idea why this, see the documentation of WinHook class
@@ -23,7 +23,7 @@ MoveAndFocus(num, hwndToMove){
 
 AlwaysOpenOnDesktopNumberAndGo(num, exe:=""){
   if (exe = "Explorer.EXE")
-		WinHook.Shell.Add(Func("GoMoveAndFocus").Bind(num),,CabinetWClass,,1)
+		WinHook.Shell.Add(Func("GoMoveAndFocus").Bind(num),,"CabinetWClass",,1)
   else
 		WinHook.Shell.Add(Func("GoMoveAndFocus").Bind(num),,,exe,1)
 }
