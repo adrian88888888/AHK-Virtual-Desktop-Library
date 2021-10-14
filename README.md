@@ -271,5 +271,3 @@ And thanks to the ahk community
 -I have to create a function called AlwaysStayWindowOnDesktop(desktop, exe), because they move by themselves sometimes from one dektop to another, all thanks to a low level bug on windows
 
 -sometimes the file explorer opens not maximized, wich is anoying
-
--aparently AltTabOnSwitch(True) does not work
