@@ -16,7 +16,7 @@ For example:
 
 ## Index:
 - [Installation](#Installation)
-- [Documentation](#Documentation)
+- [Functions](#Functions)
    - [Navigate between desktops](#Navigate-between-desktops)
       - GoToDesktop(desktop_number)
       - GoToNextDesktop()
@@ -79,7 +79,7 @@ For example:
 
 ------------------
 
-# Documentation:
+# Functions:
 
 Note: a lot of functions takes the parameter hwnd, you can use the [Built in Function](#usefull-built-in-functions) `GetActiveHwnd()` to get the active hwnd<br/>
 To the newbies: hwnd = ahk_id = it's the id of the window, every window has one
