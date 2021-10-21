@@ -1,7 +1,6 @@
 GoToDesktop(num){
 	BugFix()
 	DllCall(GoToDesktopNumberProc, Int, num - 1)
-	return
 }
 
 GoToNextDesktop(){
