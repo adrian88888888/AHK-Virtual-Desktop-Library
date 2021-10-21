@@ -16,6 +16,8 @@ For example:
 
 ## Index:
 - [Installation](#Installation)
+- [Working AHK Example](#Working-AHK-Example)
+- [Usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 - [Functions](#Functions)
    - [Navigate between desktops](#Navigate-between-desktops)
       - GoToDesktop(desktop_number)
@@ -73,8 +75,6 @@ For example:
       - GetActiveTitle()
       - CopyActiveTitle()
       - IsTitleActive(title)
-- [Working AHK Example](#Working-AHK-Example)
-- [Usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 - [Credits](#Credits)
 
 ------------------
