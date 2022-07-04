@@ -194,7 +194,7 @@ Meant to make it easier<br/>
 |`IsTitleActive(title)`|Returns `True` if is active and `False` if not, you have to give it a `windowTitle` as a parameter|
 
 # Working AHK Example:
-I put a bunch of hotkeys together so you can test it for yourself, with escape you exit
+I put a bunch of hotkeys together so you can test it for yourself, with escape you exit the script
 ```autohotkey
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 
