@@ -16,6 +16,7 @@ For example:
 
 ## Index:
 - [Installation](#Installation)
+- [Additional steps to install it on Windows 11](#Additional-steps-to-install-it-on-Windows-11)
 - [Working AHK Example](#Working-AHK-Example)
 - [Usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 - [Functions](#Functions)
