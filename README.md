@@ -14,7 +14,7 @@ For example:
 - and more!
 - Also there's a [list of usefull ideas to use this library](#Usefull-ideas-to-use-this-library)
 
-## Index:
+## Index(start here):
 - [Installation](#Installation)
 - [Additional steps to install it on Windows 11](#Additional-steps-to-install-it-on-Windows-11)
 - [Working AHK Example](#Working-AHK-Example)
@@ -76,6 +76,37 @@ For example:
 - [Credits](#Credits)
 
 ------------------
+
+# Installation:
+Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663, it was done with ahk v1<br/>
+1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
+2. Download the "lib" folder
+3. Put it in the same folder as your script
+4. You should end up with:
+
+```
+Your script folder(or repo)
+├── lib
+│    ├── AHK-Virtual-Desktop-Library
+│    ├── Other Library if you have
+│    ├── Other Library if you have
+│    └──...
+└── Your Script Here.ahk
+```
+
+5. Then include the library in your script like this:
+
+```autohotkey
+#Include lib\AHK-Virtual-Desktop-Library\Main.ahk
+```
+
+6. I really recomend deactivating the animation of changing desktops, they are "enemies" of instant responsiveness, try it for a while, to do so:<br/>
+```Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok```
+
+# Additional steps to install it on Windows 11:
+Your script connects to the AHK-Virtual-Desktop-Library, and the library connects to the VirtualDesktopAccessor.dll(a file inside the library), and that .dll connects to Windows<br/>
+The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
+Download, reemplace and make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" the .dll<br/>
 
 # Functions:
 
@@ -260,37 +291,6 @@ Escape::ExitApp
 If you have any usefull way you use this library and is not in this list, please open an isue and tell me so i add it to this list, that way i hope between everyone we get a good list<br/>
 I also put only original ideas, pressing 1,2,3 to go to desktop 1,2,3 its not going to be here
 PLEASE: if you do the code of any of this ideas, show me your repo so I can link it here or so we/I can use it, thanks!
-
-# Installation:
-Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663, it was done with ahk v1<br/>
-1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
-2. Download the "lib" folder
-3. Put it in the same folder as your script
-4. You should end up with:
-
-```
-Your script folder(or repo)
-├── lib
-│    ├── AHK-Virtual-Desktop-Library
-│    ├── Other Library if you have
-│    ├── Other Library if you have
-│    └──...
-└── Your Script Here.ahk
-```
-
-5. Then include the library in your script like this:
-
-```autohotkey
-#Include lib\AHK-Virtual-Desktop-Library\Main.ahk
-```
-
-6. I really recomend deactivating the animation of changing desktops, they are "enemies" of instant responsiveness, try it for a while, to do so:<br/>
-```Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok```
-
-# Additional steps to install it on Windows 11:
-Your script connects to the AHK-Virtual-Desktop-Library, and the library connects to the VirtualDesktopAccessor.dll(a file inside the library), and that .dll connects to Windows<br/>
-The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
-Download, reemplace and make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" the .dll<br/>
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
