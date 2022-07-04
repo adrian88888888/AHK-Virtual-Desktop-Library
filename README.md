@@ -268,7 +268,7 @@ Note: This DLL and library works only on 64 bit Windows 10 and it was tested wit
 4. You should end up with:
 
 ```
-Your script folder
+Your script folder(or repo)
 ├── lib
 │    ├── AHK-Virtual-Desktop-Library
 │    ├── Other Library if you have
