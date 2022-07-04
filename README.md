@@ -282,11 +282,11 @@ Your script folder(or repo)
 ```autohotkey
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
-Note: If you want to modify the structure in the Main.ahk put the dir of the VirtualDesktopAccessor.dll right again<br/><br/>
-Your script connects to the AHK-Virtual-Desktop-Library, and that library connects to the VirtualDesktopAccessor.dll a file inside the library), and that .dll connects to Windows
-Note only for Windows 11 users:
-The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor
-If you do this, make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" it
+
+Note only for Windows 11 users:<br/>
+Your script connects to the AHK-Virtual-Desktop-Library, and that library connects to the VirtualDesktopAccessor.dll a file inside the library), and that .dll connects to Windows<br/>
+The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
+If you do this, make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" it<br/>
 
 6. I really recomend deactivating the animation of changing desktops, they are "enemies" of instant responsiveness, try it for a while, to do so:<br/>
 ```Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok```
