@@ -283,13 +283,13 @@ Your script folder(or repo)
 #Include lib\AHK-Virtual-Desktop-Library\Main.ahk
 ```
 
-Note only for Windows 11 users:<br/>
-Your script connects to the AHK-Virtual-Desktop-Library, and that library connects to the VirtualDesktopAccessor.dll a file inside the library), and that .dll connects to Windows<br/>
-The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
-If you do this, make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" it<br/>
-
 6. I really recomend deactivating the animation of changing desktops, they are "enemies" of instant responsiveness, try it for a while, to do so:<br/>
 ```Win+r > sysdm.cpl > enter > advanced options > performance > configuration > uncheck the "Animate windows when minimizing and maximizing" > apply > ok```
+
+# Additional steps to install it on Windows 11:
+Your script connects to the AHK-Virtual-Desktop-Library, and the library connects to the VirtualDesktopAccessor.dll(a file inside the library), and that .dll connects to Windows<br/>
+The library will need the latest VirtualDesktopAccessor.dll, one that is up to date with Windows 11, wich can be found at the repo of the autor of VirtualDesktopAccessor.dll: https://github.com/Ciantic/VirtualDesktopAccessor<br/>
+Download, reemplace and make sure that the line 5 of Main.ahk(that file is inside the library) has the right path to the VirtualDesktopAccessor.dll so it can "see" the .dll<br/>
 
 # Credits:
 I want to thank Ciantic(Jari Pennanen) because he did the .dll that connects to Windows, thats black magic for me, so thanks<br/>
