@@ -263,7 +263,7 @@ PLEASE: if you do the code of any of this ideas, show me your repo so I can link
 # Installation:
 Note: This DLL and library works only on 64 bit Windows 10 and it was tested with 1809 build 17663, it was done with ahk v1<br/>
 1. You probably need [VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads "VS 2017 runtimes vc_redist.x64.exe and/or vc_redist.x86.exe") if they are not installed already
-2. Download the folder lib
+2. Download the "lib" folder
 3. Put it in the same folder as your script
 4. You should end up with:
 
